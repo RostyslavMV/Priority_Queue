@@ -151,11 +151,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="PriorityQueue.cpp" />
+    <ClCompile Include="List.cpp" />
+    <ClCompile Include="PriorityQueueList.cpp" />
     <ClCompile Include="Priority_Queue.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PriorityQueue.h" />
+    <ClInclude Include="List.h" />
+    <ClInclude Include="PriorityQueueInterface.h" />
+    <ClInclude Include="PriorityQueueList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

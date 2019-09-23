@@ -3,7 +3,7 @@
 
 using std::vector;
 
-class PriorityQueue
+class PriorityQueueInterface
 {
 private:
 	
