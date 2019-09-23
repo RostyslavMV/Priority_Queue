@@ -15,13 +15,14 @@ public:
 	void out(); // Output list from current node to the end
 };
 
-template<typename T>
+template<template<class> class myNode, typename T>
 class List
 {
 private:
-	Node<T>* begin;
+	myNode<T>* begin;
 public:
 	List(T firstData);
 	void out();
 };
+
 

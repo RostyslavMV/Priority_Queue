@@ -19,14 +19,14 @@ void Node<T>::out()
 	cout << endl;
 }
 
-template<typename T>
-List<T>::List(T firstData)
+template <template<class> class myNode, typename T>
+List<myNode, T>::List(T firstData)
 {
-	begin = new Node<T>(firstData);
+	begin = firstData;
 }
 
-template<typename T>
-void List<T>::out()
+template <template<class> class myNode, typename T>
+void List<myNode, T>::out()
 {
 	begin->out();
 }
