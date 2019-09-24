@@ -2,7 +2,7 @@
 #include "PriorityQueueInterface.h"
 #include "List.h"
 
-template <typename myNode, typename T>
+template <typename T>
 class PriorityQueueList :
 	public PriorityQueueInterface <T>
 {
