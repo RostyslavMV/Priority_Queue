@@ -1,15 +1,20 @@
 #pragma once
 #include "PriorityQueueInterface.h"
+#include "List.h"
 
-template <typename T>
-
+template <typename myNode, typename T>
 class PriorityQueueList :
 	public PriorityQueueInterface <T>
 {
+private:
+	List<T> mList;
 public:
-	virtual void Push() override;
-	virtual void Pop() override;
-	virtual void Empty() override;
-	virtual T top() override;
+	PriorityQueueList(T firstData);
+	void Push() override;
+	void Pop() override;
+	void Empty() override;
+	T top() override;
+	
 };
+
 

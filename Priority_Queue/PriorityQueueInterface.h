@@ -11,9 +11,8 @@ public:
 	virtual void Pop() = 0;
 	virtual void Empty() = 0;
 	virtual T top() = 0;
-	int Size() 
+	int Size()
 	{
 		return size;
 	}
 };
-

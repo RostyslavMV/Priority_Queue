@@ -1,28 +1,61 @@
 #pragma once
-#include<iostream>
+#include <iostream>
+#include <vector>
 
 using std::cout;
 using std::endl;
 
 template<typename T>
-class Node 
-{
+class ListNode {
 public:
 	T data;
-	int priority; // Lower value means higher priority in queue
-	Node* next;
-	Node(T data, int priotity);
-	void out(); // Output list from current node to the end
+	ListNode<T>* next;
+	ListNode<T>* prev;
+	ListNode(T data);
+	ListNode(T data, ListNode<T>* prev, ListNode<T>* next);
+	~ListNode();
+	void Out();
 };
 
-template<template<class> class myNode, typename T>
-class List
-{
-private:
-	myNode<T>* begin;
+template<typename T>
+class List {
 public:
-	List(T firstData);
-	void out();
+	virtual void Out() = 0;
+	virtual void Add(T data) = 0;
+	virtual bool Insert(T key, T data) = 0;
+	virtual bool Remove(T key) = 0;
+}; 
+template<typename T>
+ListNode<T>* Find(ListNode<T>* const pbeg, T d);
+
+template<typename T>
+class DoublyLinkedList : public List<T> {
+private:
+	ListNode<T>* begin;
+	ListNode<T>* end;
+public:
+	DoublyLinkedList(T first_data);
+	~DoublyLinkedList();
+	void Out() override;
+	void Add(T data) override;
+	bool  Insert(T key, T data) override;
+	bool Remove(T key) override;
 };
 
-
+template<typename T>
+class ArrayList : public List<T> {
+private:
+	int size;
+	int capacity;
+	T* items;
+	const int INITIAL_CAPACITY = 4;
+	void GrowCapacity();
+	int Find(T key);
+public:
+	ArrayList(T firstData);
+	~ArrayList();
+	void Out() override;
+	void Add(T data) override;
+	bool Insert(T key, T data) override;
+	bool Remove(T key) override;
+};
