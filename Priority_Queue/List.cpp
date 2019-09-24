@@ -1,6 +1,19 @@
 #include "List.h"
 
 template<typename T>
+ListNode<T>* Find(ListNode<T>* const beg, T d)
+{
+	ListNode<T>* current = beg;
+	while (current)
+	{
+		if (current->data == d)
+			break;
+		current = current->next;
+	}
+	return current;
+}
+
+template<typename T>
 ListNode<T>::ListNode(T data)
 {
 	this->data = data;
@@ -32,18 +45,6 @@ void ListNode<T>::Out()
 	cout << endl;
 }
 
-template<typename T>
-ListNode<T>* Find(ListNode<T>* const pbeg, T d)
-{
-	ListNode<T>* current = pbeg;
-	while (current)
-	{
-		if (current->data == d)
-			break;
-		current = current->next;
-	}
-	return current;
-}
 
 template<typename T>
 DoublyLinkedList<T>::DoublyLinkedList(T firstData)
@@ -135,6 +136,15 @@ void ArrayList<T>::GrowCapacity()
 }
 
 template<typename T>
+ArrayList<T>::ArrayList(T firstData)
+{
+	items = new T[INITIAL_CAPACITY];
+	items[0] = firstData;
+	capacity = INITIAL_CAPACITY;
+	size = 1;
+}
+
+template<typename T>
 int ArrayList<T>::Find(T key)
 {
 	for (int i = 0; i < size; i++)
@@ -143,15 +153,6 @@ int ArrayList<T>::Find(T key)
 			return i;
 	}
 	return -1;
-}
-
-template<typename T>
-ArrayList<T>::ArrayList(T firstData)
-{
-	items = new T[INITIAL_CAPACITY];
-	items[0] = firstData;
-	capacity = INITIAL_CAPACITY;
-	size = 1;
 }
 
 template<typename T>

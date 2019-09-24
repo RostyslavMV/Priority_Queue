@@ -25,8 +25,9 @@ public:
 	virtual bool Insert(T key, T data) = 0;
 	virtual bool Remove(T key) = 0;
 }; 
+
 template<typename T>
-ListNode<T>* Find(ListNode<T>* const pbeg, T d);
+ListNode<T>* Find(ListNode<T>* const beg, T d);
 
 template<typename T>
 class DoublyLinkedList : public List<T> {

@@ -13,8 +13,7 @@ public:
 	void Push() override;
 	void Pop() override;
 	void Empty() override;
-	T top() override;
-	
+	T top() override;	
 };
 
 
