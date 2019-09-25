@@ -1,7 +1,14 @@
 #pragma once
 
-template <typename T>
+template<typename T>
+class PriorityItem
+{
+	T value;
+	int priority;
+};
 
+
+template <typename T>
 class PriorityQueueInterface
 {
 private:
