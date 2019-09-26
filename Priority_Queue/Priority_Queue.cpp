@@ -3,5 +3,5 @@
 
 int main()
 {
-	PriorityQueueList<int> pql;
+	
 }
