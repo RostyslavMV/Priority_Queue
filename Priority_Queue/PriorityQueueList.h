@@ -10,12 +10,12 @@ class PriorityQueueList :
 public:
 	virtual void Push(T data, int priority) = 0;
 	virtual void Pop() = 0;
-	void Empty() {
+	virtual T Top() = 0;
+	bool Empty() override {
 		if (this->Size() == 0) return true;
 		else
 		{
 			return false;
 		}
 	}
-	virtual T Top() = 0;
 };

@@ -51,6 +51,7 @@ DoublyLinkedList<T>::DoublyLinkedList(T firstData)
 {
 	begin = new ListNode<T>(firstData);
 	end = begin;
+	
 }
 
 template<typename T>
@@ -142,6 +143,7 @@ template<typename T>
 void ArrayList<T>::GrowCapacity()
 {
 	capacity *= 2;
+	int size = this->Size();
 	T* new_items = new T[capacity];
 	for (int i = 0; i < size; i++)
 	{
@@ -157,7 +159,7 @@ ArrayList<T>::ArrayList(T firstData)
 	items = new T[INITIAL_CAPACITY];
 	items[0] = firstData;
 	capacity = INITIAL_CAPACITY;
-	size = 1;
+	this->SetSize(1);
 }
 
 template<typename T>
@@ -165,12 +167,13 @@ ArrayList<T>::ArrayList()
 {
 	items = new T[INITIAL_CAPACITY];
 	capacity = INITIAL_CAPACITY;
-	size = 0;
+	this->SetSize(0);
 }
 
 template<typename T>
 int ArrayList<T>::Find(T key)
 {
+	int size = this->Size();
 	for (int i = 0; i < size; i++)
 	{
 		if (items[i] == key)
@@ -188,6 +191,7 @@ ArrayList<T>::~ArrayList()
 template<typename T>
 void ArrayList<T>::Out()
 {
+	int size = this->Size();
 	for (int i = 0; i < size; i++)
 	{
 		cout << items[i] << " ";
@@ -198,6 +202,7 @@ void ArrayList<T>::Out()
 template<typename T>
 void ArrayList<T>::Add(T data)
 {
+	int size = this->Size();
 	if (size == capacity)
 	{
 		GrowCapacity();
@@ -214,6 +219,7 @@ bool ArrayList<T>::Insert(T key, T data)
 	{
 		return false;
 	}
+	int size = this->Size();
 	if (size == capacity)
 	{
 		GrowCapacity();
@@ -236,6 +242,7 @@ bool ArrayList<T>::Remove(T key)
 	{
 		return false;
 	}
+	int size = this->Size();
 	for (int i = keyIndex; i < size - 1; i++)
 	{
 		items[i] = items[i + 1];

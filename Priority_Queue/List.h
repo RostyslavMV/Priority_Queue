@@ -19,11 +19,20 @@ public:
 
 template<typename T>
 class List {
+private:
+	int size;
 public:
 	virtual void Out() = 0;
 	virtual void Add(T data) = 0;
 	virtual bool Insert(T key, T data) = 0;
 	virtual bool Remove(T key) = 0;
+	int Size()
+	{
+		return size;
+	}
+	void SetSize(int newSize) {
+		size = newSize;
+	}
 }; 
 
 template<typename T>
@@ -34,6 +43,7 @@ class DoublyLinkedList : public List<T> {
 private:
 	ListNode<T>* begin;
 	ListNode<T>* end;
+	
 public:
 	DoublyLinkedList(T first_data);
 	DoublyLinkedList();
@@ -47,13 +57,12 @@ public:
 template<typename T>
 class ArrayList : public List<T> {
 private:
-	int size;
 	int capacity;
-	T* items;
 	const int INITIAL_CAPACITY = 4;
 	void GrowCapacity();
 	int Find(T key);
 public:
+	T* items;
 	ArrayList(T firstData);
 	ArrayList();
 	~ArrayList();
