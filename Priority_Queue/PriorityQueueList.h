@@ -6,16 +6,13 @@
 template <typename T>
 class PriorityQueueList :
 	public PriorityQueueInterface <T>
-{ 
+{
+private:
+	List<PriorityItem<T>>* list;
 public:
-	virtual void Push(T data, int priority) = 0;
-	virtual void Pop() = 0;
-	void Empty() {
-		if (this->Size() == 0) return true;
-		else
-		{
-			return false;
-		}
-	}
-	virtual T Top() = 0;
+	PriorityQueueList(T firstData, int firstPriority, bool useLinkedList);
+	void Push(T data, int priority) override;
+	void Pop() override;
+	void Empty() override;
+	T Top() override;
 };

@@ -152,16 +152,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="List.cpp" />
-    <ClCompile Include="PriorityQueueArrayList.cpp" />
-    <ClCompile Include="PriorityQueueLinkedList.cpp" />
     <ClCompile Include="PriorityQueueList.cpp" />
     <ClCompile Include="Priority_Queue.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="List.h" />
-    <ClInclude Include="PriorityQueueArrayList.h" />
     <ClInclude Include="PriorityQueueInterface.h" />
-    <ClInclude Include="PriorityQueueLinkedList.h" />
     <ClInclude Include="PriorityQueueList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

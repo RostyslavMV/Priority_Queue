@@ -54,13 +54,6 @@ DoublyLinkedList<T>::DoublyLinkedList(T firstData)
 }
 
 template<typename T>
-DoublyLinkedList<T>::DoublyLinkedList()
-{
-	begin = nullptr;
-	end = begin;
-}
-
-template<typename T>
 DoublyLinkedList<T>::~DoublyLinkedList()
 {
 	ListNode<T>* current = begin, * toDelete;
@@ -152,14 +145,6 @@ ArrayList<T>::ArrayList(T firstData)
 }
 
 template<typename T>
-ArrayList<T>::ArrayList()
-{
-	items = new T[INITIAL_CAPACITY];
-	capacity = INITIAL_CAPACITY;
-	size = 0;
-}
-
-template<typename T>
 int ArrayList<T>::Find(T key)
 {
 	for (int i = 0; i < size; i++)
@@ -232,8 +217,4 @@ bool ArrayList<T>::Remove(T key)
 		items[i] = items[i + 1];
 	}
 	return true;
-}
-
-void temp(){
-	DoublyLinkedList<int> list;
 }
