@@ -3,5 +3,5 @@
 
 int main()
 {
-	DoublyLinkedList<int> list;
+	 List<int>* list = new DoublyLinkedList<int>();
 }
