@@ -36,6 +36,7 @@ private:
 	ListNode<T>* end;
 public:
 	DoublyLinkedList(T first_data);
+	DoublyLinkedList();
 	~DoublyLinkedList();
 	void Out() override;
 	void Add(T data) override;
@@ -54,6 +55,7 @@ private:
 	int Find(T key);
 public:
 	ArrayList(T firstData);
+	ArrayList();
 	~ArrayList();
 	void Out() override;
 	void Add(T data) override;
