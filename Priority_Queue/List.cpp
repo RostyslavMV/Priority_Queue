@@ -81,19 +81,10 @@ void DoublyLinkedList<T>::Out()
 template<typename T>
 void DoublyLinkedList<T>::Add(T data)
 {
-	ListNode<T>* node = new ListNode<T>(data);
-	if (begin == nullptr)
-	{
-		begin = node;
-		end = node;
-	}
-	else
-	{
-		end->next = node;
-		node->prev = end;
-		node->next = nullptr;
-		end = node;
-	}
+	ListNode<T>* node = new ListNode<T>(data, end, nullptr);
+
+	end->next = node;
+	end = node;
 }
 
 template<typename T>
