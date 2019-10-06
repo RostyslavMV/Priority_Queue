@@ -8,10 +8,8 @@ class PriorityQueueLinkedList :
 private:
 	DoublyLinkedList<PriorityItem<T>> list;
 public:
-	PriorityQueueLinkedList(T firstData, int priority) 
+	PriorityQueueLinkedList(T firstData, int priority) : list(PriorityItem<T>(firstData, priority))
 	{
-		PriorityItem<T> pi(firstData, priority);
-		list = DoublyLinkedList<PriorityItem<T>>(pi);
 	}
 
 	PriorityQueueLinkedList()

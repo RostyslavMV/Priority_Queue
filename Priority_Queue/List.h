@@ -43,6 +43,7 @@ template<typename T>
 class List {
 private:
 	int size;
+	//TODO: make size protected, get rid of SetSize, IncrementSize
 public:
 	virtual void Out() = 0;
 	virtual void Add(T data) = 0;
