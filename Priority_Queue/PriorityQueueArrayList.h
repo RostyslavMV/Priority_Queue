@@ -19,11 +19,16 @@ public:
 	}
 	void Push(T data, int priority) override 
 	{
-		//TODO
+		PriorityItem<T> item(data, priority);
+		if (list.Size() == 0) list.Add(item);
+		else
+		{
+			//TODO
+		}
 	}
 	void Pop() override 
 	{
-		list.Remove(Top());
+		list.Remove(list.items[0]);
 	}
 	bool Empty() override
 	{

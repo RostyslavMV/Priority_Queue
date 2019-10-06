@@ -32,7 +32,7 @@ public:
 		ListNode* current = this;
 		while (current)
 		{
-			cout << current->data << ' ';
+			//cout << current->data << ' ';
 			current = current->next;
 		}
 		cout << endl;
@@ -52,8 +52,13 @@ public:
 	{
 		return size;
 	}
-	void SetSize(int newSize) {
-		size = newSize;
+	void SetSize(int size)
+	{
+		this->size = size;
+	}
+	void IncrementSize()
+	{
+		this->size++;
 	}
 };
 
@@ -75,17 +80,26 @@ class DoublyLinkedList : public List<T> {
 private:
 	ListNode<T>* begin;
 	ListNode<T>* end;
-
 public:
+	ListNode<T>* Begin() 
+	{
+		return begin;
+	}
+	ListNode<T>* End()
+	{
+		return end;
+	}
 	DoublyLinkedList(T firstData)
 	{
 		begin = new ListNode<T>(firstData);
 		end = begin;
+		this->SetSize(1);
 	}
 	DoublyLinkedList()
 	{
 		begin = nullptr;
 		end = begin;
+		this->SetSize(0);
 	}
 	~DoublyLinkedList()
 	{
@@ -96,6 +110,7 @@ public:
 			current = current->next;
 			delete toDelete;
 		}
+		this->SetSize(0);
 	}
 	void Out() override
 	{
@@ -116,8 +131,24 @@ public:
 			node->next = nullptr;
 			end = node;
 		}
+		this->IncrementSize();
 	}
-	bool  Insert(T key, T data) override
+
+	void InsertAtBegin(T data)
+	{
+		if (begin == nullptr)
+		{
+			this->Add(data);
+		}
+		else
+		{
+			ListNode<T>* node = new ListNode<T>(data, nullptr, begin);
+			begin = node;
+		}
+		this->IncrementSize();
+	}
+
+	bool Insert(T key, T data) override
 	{
 		if (ListNode<T> * pkey = Find(begin, key))
 		{
@@ -127,6 +158,7 @@ public:
 				(node->next)->prev = node;
 			else
 				end = node;
+			this->IncrementSize();
 			return true;
 		}
 		return false;
@@ -152,9 +184,30 @@ public:
 				(node->next)->prev = node->prev;
 			}
 			delete node;
+			this->SetSize(this->Size() - 1);
 			return true;
 		}
 		return false;
+	}
+	void RemoveNode(ListNode<T>* node) 
+	{
+		if (node == begin)
+		{
+			begin = begin->next;
+			begin->prev = nullptr;
+		}
+		else if (node == end)
+		{
+			end = end->prev;
+			end->next = nullptr;
+		}
+		else
+		{
+			(node->prev)->next = node->next;
+			(node->next)->prev = node->prev;
+		}
+		delete node;
+		this->SetSize(this->Size() - 1);
 	}
 };
 
@@ -166,8 +219,8 @@ private:
 	void GrowCapacity()
 	{
 		capacity *= 2;
-		int size = this->Size();
 		T* new_items = new T[capacity];
+		int size = this->Size();
 		for (int i = 0; i < size; i++)
 		{
 			new_items[i] = items[i];
@@ -214,13 +267,12 @@ public:
 	}
 	void Add(T data) override
 	{
-		int size = this->Size();
-		if (size == capacity)
+		if (this->Size() == capacity)
 		{
 			GrowCapacity();
 		}
-		items[size] = data;
-		size++;
+		items[this->Size()] = data;
+		this->IncrementSize();
 	}
 	bool Insert(T key, T data) override
 	{
@@ -229,18 +281,18 @@ public:
 		{
 			return false;
 		}
-		int size = this->Size();
-		if (size == capacity)
+		if (this->Size() == capacity)
 		{
 			GrowCapacity();
 		}
 		keyIndex++;
+		int size = this->Size();
 		for (int i = size; i > keyIndex; i--)
 		{
 			items[i] = items[i - 1];
 		}
 		items[keyIndex] = data;
-		size++;
+		this->IncrementSize();
 		return true;
 	}
 	bool Remove(T key) override
@@ -255,6 +307,7 @@ public:
 		{
 			items[i] = items[i + 1];
 		}
+		this->SetSize(this->Size() - 1);
 		return true;
 	}
 };

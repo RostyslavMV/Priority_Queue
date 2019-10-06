@@ -10,29 +10,55 @@ private:
 public:
 	PriorityQueueLinkedList(T firstData, int priority) 
 	{
-		list = DoublyLinkedList<PriorityItem<T>>(firstData, priority);
+		PriorityItem<T> pi(firstData, priority);
+		list = DoublyLinkedList<PriorityItem<T>>(pi);
 	}
+
 	PriorityQueueLinkedList()
 	{
 		list.SetSize(0);
 	}
+
 	void Push(T data, int priority) override 
 	{
-		//TODO
+		PriorityItem<T> item(data, priority);
+		if (list.Size() == 0) list.Add(item);
+		else
+		{
+			if (priority < list.Begin()->data.priority) list.InsertAtBegin(item);
+			else
+			{
+
+			}
+		}
 	}
+
+	void outBeg() 
+	{
+		list.begin->Out();
+	}
+
 	void Pop() override 
 	{
-		list.Remove(Top());
+		list.RemoveNode(list.Begin());
 	}
-	bool Empty() override {
+
+	bool Empty() override 
+	{
 		if (list.Size() == 0) return true;
 		return false;
 	}
+
 	T Top() override {
-		return list.begin.value;
+		return list.Begin()->data.value;
 	}
+
 	int Size() override {
 		return list.Size();
+	}
+
+	~PriorityQueueLinkedList()
+	{
 	}
 };
 
