@@ -41,25 +41,17 @@ public:
 
 template<typename T>
 class List {
-private:
-	int size;
-	//TODO: make size protected, get rid of SetSize, IncrementSize
+protected:
+	int size = 0;
 public:
 	virtual void Out() = 0;
 	virtual void Add(T data) = 0;
 	virtual bool Insert(T key, T data) = 0;
 	virtual bool Remove(T key) = 0;
+	virtual void InsertAtBegin(T data) = 0;
 	int Size()
 	{
 		return size;
-	}
-	void SetSize(int size)
-	{
-		this->size = size;
-	}
-	void IncrementSize()
-	{
-		this->size++;
 	}
 };
 
@@ -79,10 +71,10 @@ ListNode<T>* Find(ListNode<T>* const beg, T d)
 template<typename T>
 class DoublyLinkedList : public List<T> {
 private:
-	ListNode<T>* begin;
-	ListNode<T>* end;
+	ListNode<T>* begin = nullptr;
+	ListNode<T>* end = nullptr;
 public:
-	ListNode<T>* Begin() 
+	ListNode<T>* Begin()
 	{
 		return begin;
 	}
@@ -94,13 +86,13 @@ public:
 	{
 		begin = new ListNode<T>(firstData);
 		end = begin;
-		this->SetSize(1);
+		this->size = 1;
 	}
 	DoublyLinkedList()
 	{
 		begin = nullptr;
 		end = begin;
-		this->SetSize(0);
+		this->size = 0;
 	}
 	~DoublyLinkedList()
 	{
@@ -111,7 +103,7 @@ public:
 			current = current->next;
 			delete toDelete;
 		}
-		this->SetSize(0);
+		this->size = 0;
 	}
 	void Out() override
 	{
@@ -132,10 +124,10 @@ public:
 			node->next = nullptr;
 			end = node;
 		}
-		this->IncrementSize();
+		this->size++;
 	}
 
-	void InsertAtBegin(T data)
+	void InsertAtBegin(T data) override
 	{
 		if (begin == nullptr)
 		{
@@ -146,7 +138,7 @@ public:
 			ListNode<T>* node = new ListNode<T>(data, nullptr, begin);
 			begin = node;
 		}
-		this->IncrementSize();
+		this->size++;
 	}
 
 	bool Insert(T key, T data) override
@@ -159,7 +151,7 @@ public:
 				(node->next)->prev = node;
 			else
 				end = node;
-			this->IncrementSize();
+			this->size++;
 			return true;
 		}
 		return false;
@@ -185,17 +177,17 @@ public:
 				(node->next)->prev = node->prev;
 			}
 			delete node;
-			this->SetSize(this->Size() - 1);
+			this->size--;
 			return true;
 		}
 		return false;
 	}
-	void RemoveNode(ListNode<T>* node) 
+	void RemoveNode(ListNode<T>* node)
 	{
 		if (node == begin)
 		{
 			begin = begin->next;
-			begin->prev = nullptr;
+			if (begin != nullptr) begin->prev = nullptr;
 		}
 		else if (node == end)
 		{
@@ -208,21 +200,21 @@ public:
 			(node->next)->prev = node->prev;
 		}
 		delete node;
-		this->SetSize(this->Size() - 1);
+		this->size--;
 	}
 };
 
 template<typename T>
 class ArrayList : public List<T> {
 private:
+	T* items;
 	int capacity;
 	const int INITIAL_CAPACITY = 4;
 	void GrowCapacity()
 	{
 		capacity *= 2;
 		T* new_items = new T[capacity];
-		int size = this->Size();
-		for (int i = 0; i < size; i++)
+		for (int i = 0; i < this->size; i++)
 		{
 			new_items[i] = items[i];
 		}
@@ -231,8 +223,7 @@ private:
 	}
 	int Find(T key)
 	{
-		int size = this->Size();
-		for (int i = 0; i < size; i++)
+		for (int i = 0; i < this->size; i++)
 		{
 			if (items[i] == key)
 				return i;
@@ -240,41 +231,48 @@ private:
 		return -1;
 	}
 public:
-	T* items;
+	T& operator[] (int index)
+	{
+		if (index >= this->size || index < 0)
+		{
+			throw std::out_of_range("Incorrect index");
+		}
+		return items[index];
+	}
 	ArrayList(T firstData)
 	{
 		items = new T[INITIAL_CAPACITY];
 		items[0] = firstData;
 		capacity = INITIAL_CAPACITY;
-		this->SetSize(1);
+		this->size = 1;
 	}
 	ArrayList()
 	{
 		items = new T[INITIAL_CAPACITY];
 		capacity = INITIAL_CAPACITY;
-		this->SetSize(0);
+		this->size = 0;
 	}
 	~ArrayList() {
 		delete[] items;
 	}
 	void Out() override
 	{
-		int size = this->Size();
-		for (int i = 0; i < size; i++)
+		for (int i = 0; i < this->size; i++)
 		{
-			cout << items[i] << " ";
+			//cout << items[i] << " ";
 		}
 		cout << endl;
 	}
 	void Add(T data) override
 	{
-		if (this->Size() == capacity)
+		if (this->size == capacity)
 		{
 			GrowCapacity();
 		}
-		items[this->Size()] = data;
-		this->IncrementSize();
+		items[this->size] = data;
+		this->size++;
 	}
+
 	bool Insert(T key, T data) override
 	{
 		int keyIndex = Find(key);
@@ -282,20 +280,41 @@ public:
 		{
 			return false;
 		}
-		if (this->Size() == capacity)
+		if (this->size == capacity)
 		{
 			GrowCapacity();
 		}
 		keyIndex++;
-		int size = this->Size();
-		for (int i = size; i > keyIndex; i--)
+		for (int i = this->size; i > keyIndex; i--)
 		{
 			items[i] = items[i - 1];
 		}
 		items[keyIndex] = data;
-		this->IncrementSize();
+		this->size++;
 		return true;
 	}
+
+	void InsertAtBegin(T data) override
+	{
+		if (this->size == capacity)
+		{
+			GrowCapacity();
+		}
+		if (this->size == 0)
+		{
+			items[0] = data;
+		}
+		else
+		{
+			for (int i = this->size; i > 0; i--)
+			{
+				items[i] = items[i - 1];
+			}
+			items[0] = data;
+		}
+		this->size++;
+	}
+
 	bool Remove(T key) override
 	{
 		int keyIndex = Find(key);
@@ -303,12 +322,11 @@ public:
 		{
 			return false;
 		}
-		int size = this->Size();
-		for (int i = keyIndex; i < size - 1; i++)
+		for (int i = keyIndex; i < this->size - 1; i++)
 		{
 			items[i] = items[i + 1];
 		}
-		this->SetSize(this->Size() - 1);
+		this->size--;
 		return true;
 	}
 };

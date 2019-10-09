@@ -21,7 +21,7 @@ public:
 	PriorityItem()
 	{
 	}
-	ostream& operator<<(ostream& os)
+	ostream& operator<< (ostream& os)
 	{
 		os << value;
 		return os;

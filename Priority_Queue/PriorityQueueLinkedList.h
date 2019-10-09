@@ -26,14 +26,19 @@ public:
 			if (priority < list.Begin()->data.priority) list.InsertAtBegin(item);
 			else
 			{
-
+				ListNode<PriorityItem<T>>* currentNode = list.Begin();
+				while (currentNode->next != nullptr && currentNode->next->data.priority <= priority)
+				{
+					currentNode = currentNode->next;
+				}
+				list.Insert(currentNode->data, item);
 			}
 		}
 	}
 
 	void outBeg() 
 	{
-		list.begin->Out();
+		list.Begin()->Out();
 	}
 
 	void Pop() override 

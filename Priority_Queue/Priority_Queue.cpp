@@ -1,5 +1,6 @@
 #include <iostream>
 #include "PriorityQueueLinkedList.h"
+#include "PriorityQueueArrayList.h"
 
 int main()
 {
@@ -11,7 +12,7 @@ int main()
 	 list->Out();
 	 cout << endl;
 	 cout << "Size = " << list->Size();
-	 list->Insert(5, 6);
+	 list->InsertAtBegin(-3);
 	 cout << endl;
 	 list->Out();
 	 cout << endl;
@@ -21,8 +22,8 @@ int main()
 	 list->Out();
 	 cout << endl;
 	 cout << "Size = " << list->Size();
-	 cout << endl;
-	 List<int>* list2 = new ArrayList<int>();
+	 cout << endl;*/
+	/* List<int>* list2 = new ArrayList<int>();
 	 for (int i = 0; i < 100; i++)
 	 {
 		 list2->Add(i);
@@ -30,7 +31,7 @@ int main()
 	 list2->Out();
 	 cout << endl;
 	 cout << "Size = " << list2->Size();
-	 list2->Insert(5, 6);
+	 list2->InsertAtBegin(-3);
 	 cout << endl;
 	 list2->Out();
 	 cout << endl;
@@ -41,7 +42,23 @@ int main()
 	 cout << endl;
 	 cout << "Size = " << list2->Size();
 	 cout << endl; */
-	int val = 5;
-	PriorityQueueLinkedList<int> pq(val, 1 / val);
-	
+
+	PriorityQueueLinkedList<int> pq(5, 2);
+	//PriorityQueueArrayList<int> pq(5, 2);
+	pq.Push(3, 8);
+	pq.Push(2, 4);
+	pq.Push(7, 1);
+	cout << pq.Top()<< " ";
+	pq.Pop();
+	cout << pq.Top() << " ";
+	pq.Pop();
+	cout << pq.Top() << " ";
+	pq.Pop();
+	cout << pq.Top() << " ";
+	pq.Pop();
+	pq.Push(8, 10);
+	cout << endl;
+	cout << "Size = " << pq.Size() << endl;
+	cout << "Empty = " << pq.Empty();
+	return 0;
 }

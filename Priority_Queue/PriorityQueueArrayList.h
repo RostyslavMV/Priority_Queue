@@ -8,27 +8,31 @@ class PriorityQueueArrayList :
 private:
 	ArrayList<PriorityItem<T>> list;
 public:
-	PriorityQueueArrayList(T firstData, int priority) 
+	PriorityQueueArrayList(T firstData, int priority) :list(PriorityItem<T>(firstData, priority))
 	{
-		PriorityItem<T> first(firstData, priority);
-		list = ArrayList<PriorityItem<T>>(first);
 	}
 	PriorityQueueArrayList()
 	{
 		list.SetSize(0);
 	}
-	void Push(T data, int priority) override 
+	void Push(T data, int priority) override
 	{
 		PriorityItem<T> item(data, priority);
 		if (list.Size() == 0) list.Add(item);
 		else
 		{
-			//TODO
+			if (list[0].priority > priority) list.InsertAtBegin(item);
+			else
+			{
+				int currentId = 0;
+				while (currentId + 1 < list.Size() && list[currentId + 1].priority <= priority) currentId++;
+				list.Insert(list[currentId], item);
+			}
 		}
 	}
-	void Pop() override 
+	void Pop() override
 	{
-		list.Remove(list.items[0]);
+		list.Remove(list[0]);
 	}
 	bool Empty() override
 	{
@@ -37,7 +41,7 @@ public:
 	}
 	T Top() override
 	{
-		return list.items[0].value;
+		return list[0].value;
 	}
 	int Size() override {
 		return list.Size();
