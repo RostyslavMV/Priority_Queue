@@ -154,12 +154,14 @@
     <ClCompile Include="Priority_Queue.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AVLtree.h" />
     <ClInclude Include="List.h" />
     <ClInclude Include="PriorityQueueArrayList.h" />
     <ClInclude Include="PriorityQueueInterface.h" />
     <ClInclude Include="PriorityQueueLinkedList.h" />
     <ClInclude Include="PriorityQueueList.h" />
     <ClInclude Include="PriorityQueueTree.h" />
+    <ClInclude Include="Shape.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

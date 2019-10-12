@@ -10,8 +10,8 @@ template<typename T>
 class ListNode {
 public:
 	T data;
-	ListNode<T>* next;
-	ListNode<T>* prev;
+	ListNode<T>* next = nullptr;
+	ListNode<T>* prev = nullptr;
 	ListNode(T data)
 	{
 		this->data = data;

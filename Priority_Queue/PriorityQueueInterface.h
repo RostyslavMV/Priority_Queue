@@ -30,6 +30,28 @@ public:
 	{
 		return (value == pi.value && priority == pi.priority);
 	}
+	bool operator>(const PriorityItem& pi)
+	{
+		return (value > pi.value);
+	}
+};
+
+template<typename T>
+class PriorityTreeItem: public PriorityItem<T>
+{
+public:
+	PriorityTreeItem(T value, int priority)
+	{
+		this->value = value;
+		this->priority = priority;
+	}
+	PriorityTreeItem()
+	{
+	}
+	bool operator>(const PriorityTreeItem& pi)
+	{
+		return (this->priority > pi.priority);
+	}
 };
 
 
