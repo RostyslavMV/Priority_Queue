@@ -45,9 +45,9 @@ int main()
 	  cout << endl; */
 
 	  //PriorityQueueLinkedList<int> pq(5, 2);
-	  PriorityQueueArrayList<int> pq(5, 2);
+	 // PriorityQueueArrayList<int> pq(5, 2);
 	 // PriorityQueueTree<int> pq(5, 2);
-	  pq.Push(3, 8);
+	  /*pq.Push(3, 8);
 	  pq.Push(2, 4);
 	  pq.Push(7, 1);
 	  
@@ -63,6 +63,7 @@ int main()
 	  cout << endl;
 	  cout << "Size = " << pq.Size() << endl;
 	  cout << "Empty = " << pq.Empty();
+	*/
 	
-	  return 0;
+	return 0;
 }
