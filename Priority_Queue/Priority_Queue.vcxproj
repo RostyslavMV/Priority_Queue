@@ -152,9 +152,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Priority_Queue.cpp" />
+    <ClCompile Include="Tests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AVLtree.h" />
+    <ClInclude Include="catch.hpp" />
     <ClInclude Include="List.h" />
     <ClInclude Include="PriorityQueueArrayList.h" />
     <ClInclude Include="PriorityQueueInterface.h" />

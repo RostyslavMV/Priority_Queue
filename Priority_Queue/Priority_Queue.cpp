@@ -2,6 +2,30 @@
 #include "PriorityQueueLinkedList.h"
 #include "PriorityQueueArrayList.h"
 #include "PriorityQueueTree.h"
+#include "Shape.h"
+#include <queue>
+
+using std::priority_queue;
+
+double Parabola(double x)
+{
+	return x * x;
+}
+
+double Sqrt(double x)
+{
+	return sqrt(x);
+}
+
+double Abs(double x)
+{
+	return abs(x);
+}
+
+double Log(double x)
+{
+	return log(x);
+}
 
 int main()
 {
@@ -46,24 +70,44 @@ int main()
 
 	  //PriorityQueueLinkedList<int> pq(5, 2);
 	 // PriorityQueueArrayList<int> pq(5, 2);
-	 // PriorityQueueTree<int> pq(5, 2);
-	  /*pq.Push(3, 8);
-	  pq.Push(2, 4);
-	  pq.Push(7, 1);
-	  
-	  cout << pq.Top()<< " ";
+	 /* PriorityQueueTree<int> pq(5, 9);
+	  pq.Push(3, 7);
+	  pq.Push(2, 4);*/
+	 // pq.Push(7, 7);
+
+	 /* cout << pq.Top()<< " ";
 	  pq.Pop();
 	  cout << pq.Top() << " ";
 	  pq.Pop();
 	  cout << pq.Top() << " ";
 	  pq.Pop();
 	  cout << pq.Top() << " ";
-	  pq.Pop();
-	  pq.Push(8, 10);
+	  pq.Pop();*/
+	  /*pq.Push(8, 10);
 	  cout << endl;
 	  cout << "Size = " << pq.Size() << endl;
-	  cout << "Empty = " << pq.Empty();
-	*/
+	  cout << "Empty = " << pq.Empty();*/
+	ShapeX shape1(0, 2, Parabola);
+	cout << "Shape1 area: " << shape1.Area() << endl;
+	cout << "Shape1 perimeter: " << shape1.Perimeter() << endl;
+	Shape2Functions shape2(1, 2, Sqrt, Log);
+	cout << "Shape2 area: " << shape2.Area() << endl;
+	cout << "Shape2 perimeter: " << shape2.Perimeter() << endl;
+	ShapeIntersection shape3(&shape1, &shape2);
+	cout << "Shape3 area: " << shape3.Area() << endl;
+	cout << "Shape3 perimeter: " << shape3.Perimeter() << endl;
+	cout << "Shape1 area: " << shape1.Area() << endl;
+	PriorityQueueTree<Shape*> pq(&shape1, shape1.Area());
+	pq.Push(&shape2, shape2.Area());
+	pq.Push(&shape3, shape3.Area());
+	cout << endl;
+	cout << (shape2.Area() > shape3.Area())<<endl;
+	cout << *(pq.Top()) << endl;
+	pq.Pop();
+	cout << *(pq.Top()) << endl;
+	pq.Pop();
+	cout << *(pq.Top()) << endl;
+	pq.Pop();
 	
 	return 0;
 }

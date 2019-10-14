@@ -1,6 +1,8 @@
 #pragma once
 #include "PriorityQueueList.h"
 
+
+
 template <typename T>
 class PriorityQueueLinkedList :
 	public PriorityQueueList<T>
@@ -43,6 +45,7 @@ public:
 
 	void Pop() override 
 	{
+		if (Empty()) throw out_of_range("Atempt to pop from empty queue");
 		list.RemoveNode(list.Begin());
 	}
 
@@ -53,6 +56,7 @@ public:
 	}
 
 	T Top() override {
+		if (Empty()) throw out_of_range("Queue is empty");
 		return list.Begin()->data.value;
 	}
 

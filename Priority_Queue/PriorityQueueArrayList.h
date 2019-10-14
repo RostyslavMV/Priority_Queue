@@ -32,6 +32,7 @@ public:
 	}
 	void Pop() override
 	{
+		if (Empty()) throw out_of_range("Atempt to pop from empty queue");
 		list.Remove(list[0]);
 	}
 	bool Empty() override
@@ -41,9 +42,11 @@ public:
 	}
 	T Top() override
 	{
+		if (Empty()) throw out_of_range("Atempt to pop from empty queue");
 		return list[0].value;
 	}
 	int Size() override {
+		if (Empty()) throw out_of_range("Queue is empty");
 		return list.Size();
 	}
 };

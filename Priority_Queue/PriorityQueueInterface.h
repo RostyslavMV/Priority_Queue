@@ -12,7 +12,7 @@ class PriorityItem
 {
 public:
 	T value;
-	int priority;
+	double priority;
 	PriorityItem(T value, int priority) 
 	{
 		this->value = value;
@@ -40,7 +40,7 @@ template<typename T>
 class PriorityTreeItem: public PriorityItem<T>
 {
 public:
-	PriorityTreeItem(T value, int priority)
+	PriorityTreeItem(T value, double priority)
 	{
 		this->value = value;
 		this->priority = priority;
@@ -59,7 +59,7 @@ template <typename T>
 class PriorityQueueInterface
 {
 public:
-	virtual void Push(T data, int priority) = 0;
+	virtual void Push(T data, double priority) = 0;
 	virtual void Pop() = 0;
 	virtual bool Empty() = 0;
 	virtual T Top() = 0;
