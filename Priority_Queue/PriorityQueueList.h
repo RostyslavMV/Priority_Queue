@@ -11,7 +11,7 @@ class PriorityQueueList :
 protected:
 
 public:
-	virtual void Push(T data, int priority) = 0;
+	virtual void Push(T data, double priority) = 0;
 	virtual void Pop() = 0;
 	virtual T Top() = 0;
 	bool Empty() override {

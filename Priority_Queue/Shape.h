@@ -1,6 +1,9 @@
 #pragma once
 #include <cmath>
 #include <iostream>
+
+using std::ostream;
+
 class Shape
 {
 protected:
@@ -30,7 +33,7 @@ protected:
 	{
 		double length = 0;
 		double h = (b - a) / n;
-		for (int i = 0; i <= n; i++)
+		for (int i = 0; i < n; i++)
 		{
 			double dy = f(a + h * (i + 1)) - f(a + h * i);
 			length += sqrt(dy * dy + h * h);
@@ -147,7 +150,7 @@ private:
 		this->perimeter += abs(function2(x1) - function1(x1)) + abs(function2(x2) - function1(x2));
 	}
 public:
-	Shape2Functions(int x1, int x2, double(*function1)(double x), double(*function2)(double x),int n = 10000)
+	Shape2Functions(double x1, double x2, double(*function1)(double x), double(*function2)(double x),int n = 10000)
 	{
 		this->x1 = x1;
 		this->x2 = x2;

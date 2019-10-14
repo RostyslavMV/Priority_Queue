@@ -47,8 +47,8 @@ public:
 			AVLnode<T>* n = root, * parent;
 			while (true)
 			{
-				if (n->data == data)
-					return false;
+				/*if (n->data == data)
+					return false;*/
 				parent = n;
 				bool goLeft = n->data > data;
 				n = goLeft ? n->left : n->right;

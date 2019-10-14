@@ -10,16 +10,15 @@ class PriorityQueueLinkedList :
 private:
 	DoublyLinkedList<PriorityItem<T>> list;
 public:
-	PriorityQueueLinkedList(T firstData, int priority) : list(PriorityItem<T>(firstData, priority))
+	PriorityQueueLinkedList(T firstData, double priority) : list(PriorityItem<T>(firstData, priority))
 	{
 	}
 
 	PriorityQueueLinkedList()
 	{
-		list.SetSize(0);
 	}
 
-	void Push(T data, int priority) override 
+	void Push(T data, double priority) override 
 	{
 		PriorityItem<T> item(data, priority);
 		if (list.Size() == 0) list.Add(item);
