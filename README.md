@@ -5,4 +5,4 @@ Additionally:
 - AVL tree (**);
 - Shape between 2 shapes (*);
 
-10 (*) Overall.
+10 (*) Overall + unit tests
