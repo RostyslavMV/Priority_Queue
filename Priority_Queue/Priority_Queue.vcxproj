@@ -166,6 +166,9 @@
     <ClInclude Include="PriorityQueueTree.h" />
     <ClInclude Include="Shape.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

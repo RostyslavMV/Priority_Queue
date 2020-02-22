@@ -6,11 +6,20 @@ class PriorityQueueArrayList :
 	public PriorityQueueList<T>
 {
 private:
+	///
+	/// List on wich priority queue is based
+	///
 	ArrayList<PriorityItem<T>> list;
 public:
+	///
+	/// Constructor for priority queue with first element data
+	///
 	PriorityQueueArrayList(T firstData, double priority) :list(PriorityItem<T>(firstData, priority))
 	{
 	}
+	///
+	///
+	///
 	PriorityQueueArrayList()
 	{
 	}
