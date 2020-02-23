@@ -1,0 +1,89 @@
+\hypertarget{class_shape}{}\doxysection{Shape Class Reference}
+\label{class_shape}\index{Shape@{Shape}}
+
+
+Inherited by \mbox{\hyperlink{class_shape2_functions}{Shape2\+Functions}}, \mbox{\hyperlink{class_shape_intersection}{Shape\+Intersection}}, and \mbox{\hyperlink{class_shape_x}{ShapeX}}.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_shape_abb3df324eb8c231e1e0ca15cc2e87496}\label{class_shape_abb3df324eb8c231e1e0ca15cc2e87496}} 
+double {\bfseries Area} ()
+\item 
+\mbox{\Hypertarget{class_shape_a92fd8bd18a099e51543f166813673eef}\label{class_shape_a92fd8bd18a099e51543f166813673eef}} 
+double {\bfseries Perimeter} ()
+\item 
+\mbox{\Hypertarget{class_shape_a99ddb75252e260ff2da6f9d425454450}\label{class_shape_a99ddb75252e260ff2da6f9d425454450}} 
+void {\bfseries SetN} (int n)
+\item 
+\mbox{\Hypertarget{class_shape_abae2e4c49f0f37682bd8c0997925fd5b}\label{class_shape_abae2e4c49f0f37682bd8c0997925fd5b}} 
+double {\bfseries X1} ()
+\item 
+\mbox{\Hypertarget{class_shape_abb54e76343a3f7eb799aaf8e31f70059}\label{class_shape_abb54e76343a3f7eb799aaf8e31f70059}} 
+double {\bfseries X2} ()
+\item 
+\mbox{\Hypertarget{class_shape_a73792bbe0ab22a1c1bdc0cd6cd75b652}\label{class_shape_a73792bbe0ab22a1c1bdc0cd6cd75b652}} 
+bool {\bfseries operator==} (const \mbox{\hyperlink{class_shape}{Shape}} \&shape)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_shape_a875d284f4111a9cf544fa224ab36bbc5}\label{class_shape_a875d284f4111a9cf544fa224ab36bbc5}} 
+double($\ast$)(double x) {\bfseries Function1} ()
+\item 
+\mbox{\Hypertarget{class_shape_a13d1b1834a48105720e93df758e28c04}\label{class_shape_a13d1b1834a48105720e93df758e28c04}} 
+double($\ast$)(double x) {\bfseries Function2} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_shape_a6da57db3ac39cf6a25606623d70dd37e}\label{class_shape_a6da57db3ac39cf6a25606623d70dd37e}} 
+double {\bfseries Simpson\+Method} (double a, double b, int n, double($\ast$f)(double x))
+\item 
+\mbox{\Hypertarget{class_shape_a54c7312597f7e41f2f136ae62aac2a7b}\label{class_shape_a54c7312597f7e41f2f136ae62aac2a7b}} 
+double {\bfseries Function\+Length} (double a, double b, int n, double($\ast$f)(double x))
+\item 
+\mbox{\Hypertarget{class_shape_a84ec286573ad8e5acfba94616cbdeddd}\label{class_shape_a84ec286573ad8e5acfba94616cbdeddd}} 
+virtual void {\bfseries Calculate\+Area} ()=0
+\item 
+\mbox{\Hypertarget{class_shape_adc2d544d7185d49b99281c4beac37953}\label{class_shape_adc2d544d7185d49b99281c4beac37953}} 
+virtual void {\bfseries Calculate\+Perimeter} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_shape_a415068750ce63ae4eb2491f39b29ab9a}\label{class_shape_a415068750ce63ae4eb2491f39b29ab9a}} 
+double($\ast$ {\bfseries function1} )(double x)
+\item 
+\mbox{\Hypertarget{class_shape_a1a47a101bdaa5b24822a07120c97c937}\label{class_shape_a1a47a101bdaa5b24822a07120c97c937}} 
+double($\ast$ {\bfseries function2} )(double x)
+\item 
+\mbox{\Hypertarget{class_shape_a6107ddba021591b458571874b1df240b}\label{class_shape_a6107ddba021591b458571874b1df240b}} 
+int {\bfseries n} = 10000
+\item 
+\mbox{\Hypertarget{class_shape_a3b42a66b511e981d9526ca927967f736}\label{class_shape_a3b42a66b511e981d9526ca927967f736}} 
+double {\bfseries x1}
+\item 
+\mbox{\Hypertarget{class_shape_a44e35f66387430d45cd90e3cd64fecb0}\label{class_shape_a44e35f66387430d45cd90e3cd64fecb0}} 
+double {\bfseries x2}
+\item 
+\mbox{\Hypertarget{class_shape_aa39f9637290e04bd52a2610a34042361}\label{class_shape_aa39f9637290e04bd52a2610a34042361}} 
+double {\bfseries area}
+\item 
+\mbox{\Hypertarget{class_shape_aa0bed7abceaca8a87db2c68d2328c4d0}\label{class_shape_aa0bed7abceaca8a87db2c68d2328c4d0}} 
+double {\bfseries perimeter}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_shape_ada7f3e97b3113c4725bf7ec7293b5a36}\label{class_shape_ada7f3e97b3113c4725bf7ec7293b5a36}} 
+ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{class_shape}{Shape}} \&shape)
+\item 
+\mbox{\Hypertarget{class_shape_aea96a5ae16fce6bd7a7ebf9080e2ec6d}\label{class_shape_aea96a5ae16fce6bd7a7ebf9080e2ec6d}} 
+bool {\bfseries operator$>$} (const \mbox{\hyperlink{class_shape}{Shape}} \&shape1, const \mbox{\hyperlink{class_shape}{Shape}} \&shape2)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Priority\+\_\+\+Queue/Shape.\+h\end{DoxyCompactItemize}

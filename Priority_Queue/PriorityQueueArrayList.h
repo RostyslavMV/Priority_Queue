@@ -18,11 +18,15 @@ public:
 	{
 	}
 	///
-	///
+	/// Default constructor for priority queue
 	///
 	PriorityQueueArrayList()
 	{
 	}
+	///
+	/// Create a new item with given data and priority and push it into priority queue.
+	/// We iterate through the list untill new item's priority is higher and then insert it in a list. 
+	///
 	void Push(T data, double priority) override
 	{
 		PriorityItem<T> item(data, priority);
@@ -38,21 +42,33 @@ public:
 			}
 		}
 	}
+	///
+	/// Pop top element of priority queue (list[0] is a top one)
+	/// 
 	void Pop() override
 	{
 		if (Empty()) throw out_of_range("Atempt to pop from empty queue");
 		list.Remove(list[0]);
 	}
+	///
+	/// This bool returns true if priority queue is empty (inner list is empty)
+	///
 	bool Empty() override
 	{
 		if (list.Size() == 0) return true;
 		return false;
 	}
+	///
+	/// Returns top elemnt in priority queue (list[0])
+	///
 	T Top() override
 	{
 		if (Empty()) throw out_of_range("Atempt to pop from empty queue");
 		return list[0].value;
 	}
+	///
+	/// Returns priority queue size, which is equal to inner list size
+	///
 	int Size() override {
 		if (Empty()) throw out_of_range("Queue is empty");
 		return list.Size();

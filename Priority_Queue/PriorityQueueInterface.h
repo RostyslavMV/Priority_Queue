@@ -12,6 +12,9 @@ class PriorityItem
 {
 public:
 	T value;
+	///
+	/// Lower value of priority means higher item priority
+	///
 	double priority;
 	PriorityItem(T value, int priority) 
 	{
