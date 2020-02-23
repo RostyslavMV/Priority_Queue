@@ -21,18 +21,30 @@ public:
 		this->value = value;
 		this->priority = priority;
 	}
+	///
+	/// Default constructor
+	///
 	PriorityItem()
 	{
 	}
+	///
+	/// << operator for an item to output item's value
+	///
 	ostream& operator<< (ostream& os)
 	{
 		os << value;
 		return os;
 	}
+	///
+	/// Custom == operator
+	///
 	bool operator==(const PriorityItem& pi)
 	{
 		return (value == pi.value && priority == pi.priority);
 	}
+	///
+	/// > operator for comparing by value
+	///
 	bool operator>(const PriorityItem& pi)
 	{
 		return (value > pi.value);
@@ -43,14 +55,23 @@ template<typename T>
 class PriorityTreeItem: public PriorityItem<T>
 {
 public:
+	///
+	/// Constructor for ordinary usage
+	///
 	PriorityTreeItem(T value, double priority)
 	{
 		this->value = value;
 		this->priority = priority;
 	}
+	///
+	/// Default constructor
+	///
 	PriorityTreeItem()
 	{
 	}
+	///
+	/// > operator to compare by priority
+	///
 	bool operator>(const PriorityTreeItem& pi)
 	{
 		return (this->priority > pi.priority);
