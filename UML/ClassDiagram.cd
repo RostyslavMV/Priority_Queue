@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" GroupingSetting="Access">
+  <Class Name="PriorityItem&lt;T&gt;">
+    <Position X="1" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAAAAAACAAQAAAAAAAKAAAAAgAAAAAAA=</HashCode>
+      <FileName>PriorityQueueInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PriorityTreeItem&lt;T&gt;">
+    <Position X="0.75" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>PriorityQueueInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PriorityQueueInterface&lt;T&gt;">
+    <Position X="3.75" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAIAAAAAAACIAAAAAAAAAAAACAA=</HashCode>
+      <FileName>PriorityQueueInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PriorityQueueArrayList&lt;T&gt;">
+    <Position X="2" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAgAAQAAIAAAAAAACIAAAAAAAAAAAACAA=</HashCode>
+      <FileName>PriorityQueueArrayList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PriorityQueueLinkedList&lt;T&gt;">
+    <Position X="5.25" Y="5.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAIgAAAAAAgAAAAAIAACAAAACIAAAAAAAAAAAACAA=</HashCode>
+      <FileName>PriorityQueueLinkedList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PriorityQueueList&lt;T&gt;">
+    <Position X="4" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAACIAAAAAAAAAAAACAA=</HashCode>
+      <FileName>PriorityQueueList.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PriorityQueueTree&lt;T&gt;">
+    <Position X="8.25" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAgAAAgAIAAAAAAACIAAAAAAAAAAAACAA=</HashCode>
+      <FileName>PriorityQueueTree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shape">
+    <Position X="12.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAQEAAgABAQIAAYAAAACEEAICAUAAAAE=</HashCode>
+      <FileName>Shape.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShapeX">
+    <Position X="10.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAICAAAAAAA=</HashCode>
+      <FileName>Shape.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Shape2Functions">
+    <Position X="14.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAICAAAAAAA=</HashCode>
+      <FileName>Shape.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShapeIntersection">
+    <Position X="12.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAICAAAABIA=</HashCode>
+      <FileName>Shape.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
