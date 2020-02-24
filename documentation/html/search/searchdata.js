@@ -1,21 +1,24 @@
 var indexSectionsWithContent =
 {
-  0: "abcdefgilmnoprstuw",
+  0: "abcdefgilmnoprstuwy",
   1: "abcdefgilmnoprstuw",
-  2: "p"
+  2: "efopst",
+  3: "py"
 };
 
 var indexSectionNames =
 {
   0: "all",
   1: "classes",
-  2: "functions"
+  2: "functions",
+  3: "variables"
 };
 
 var indexSectionLabels =
 {
   0: "All",
   1: "Classes",
-  2: "Functions"
+  2: "Functions",
+  3: "Variables"
 };
 

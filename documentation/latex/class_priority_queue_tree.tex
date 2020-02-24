@@ -7,24 +7,95 @@ Inherits \mbox{\hyperlink{class_priority_queue_interface}{Priority\+Queue\+Inter
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_priority_queue_tree_a2d51ddc6d6231d36fe38642c38756226}\label{class_priority_queue_tree_a2d51ddc6d6231d36fe38642c38756226}} 
-{\bfseries Priority\+Queue\+Tree} (T first\+Data, double priority)
+\mbox{\hyperlink{class_priority_queue_tree_a8d288ffaf59030eb4f92899ae453b741}{Priority\+Queue\+Tree}} ()
 \item 
-\mbox{\Hypertarget{class_priority_queue_tree_a6ae8bc94bb8a14f82771308777fba122}\label{class_priority_queue_tree_a6ae8bc94bb8a14f82771308777fba122}} 
-void {\bfseries Push} (T data, double priority) override
+\mbox{\hyperlink{class_priority_queue_tree_a2d51ddc6d6231d36fe38642c38756226}{Priority\+Queue\+Tree}} (T first\+Data, double priority)
 \item 
-\mbox{\Hypertarget{class_priority_queue_tree_af5b335959081b1e5decbb1f1ddc582ab}\label{class_priority_queue_tree_af5b335959081b1e5decbb1f1ddc582ab}} 
-void {\bfseries Pop} () override
+void \mbox{\hyperlink{class_priority_queue_tree_a6ae8bc94bb8a14f82771308777fba122}{Push}} (T data, double priority) override
 \item 
-\mbox{\Hypertarget{class_priority_queue_tree_a32f7094889c3ce7c240a6e272677fae0}\label{class_priority_queue_tree_a32f7094889c3ce7c240a6e272677fae0}} 
-bool {\bfseries Empty} () override
+void \mbox{\hyperlink{class_priority_queue_tree_af5b335959081b1e5decbb1f1ddc582ab}{Pop}} () override
 \item 
-\mbox{\Hypertarget{class_priority_queue_tree_ad8f9b800a8c988ee3e1315a64e692216}\label{class_priority_queue_tree_ad8f9b800a8c988ee3e1315a64e692216}} 
-int {\bfseries Size} () override
+bool \mbox{\hyperlink{class_priority_queue_tree_a32f7094889c3ce7c240a6e272677fae0}{Empty}} () override
 \item 
-\mbox{\Hypertarget{class_priority_queue_tree_aa158e417d95b02028baa3f7934ea7012}\label{class_priority_queue_tree_aa158e417d95b02028baa3f7934ea7012}} 
-T {\bfseries Top} () override
+int \mbox{\hyperlink{class_priority_queue_tree_ad8f9b800a8c988ee3e1315a64e692216}{Size}} () override
+\item 
+T \mbox{\hyperlink{class_priority_queue_tree_aa158e417d95b02028baa3f7934ea7012}{Top}} () override
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_priority_queue_tree_a8d288ffaf59030eb4f92899ae453b741}\label{class_priority_queue_tree_a8d288ffaf59030eb4f92899ae453b741}} 
+\index{PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}!PriorityQueueTree@{PriorityQueueTree}}
+\index{PriorityQueueTree@{PriorityQueueTree}!PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PriorityQueueTree()}{PriorityQueueTree()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor \mbox{\Hypertarget{class_priority_queue_tree_a2d51ddc6d6231d36fe38642c38756226}\label{class_priority_queue_tree_a2d51ddc6d6231d36fe38642c38756226}} 
+\index{PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}!PriorityQueueTree@{PriorityQueueTree}}
+\index{PriorityQueueTree@{PriorityQueueTree}!PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PriorityQueueTree()}{PriorityQueueTree()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}}$<$ T $>$\+::\mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}} (\begin{DoxyParamCaption}\item[{T}]{first\+Data,  }\item[{double}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Constructor for priority queue with first element data 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_priority_queue_tree_a32f7094889c3ce7c240a6e272677fae0}\label{class_priority_queue_tree_a32f7094889c3ce7c240a6e272677fae0}} 
+\index{PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}!Empty@{Empty}}
+\index{Empty@{Empty}!PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}}$<$ T $>$\+::Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This bool returns true if priority queue is empty (inner list is empty) 
+
+Implements \mbox{\hyperlink{class_priority_queue_interface}{Priority\+Queue\+Interface$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_priority_queue_tree_af5b335959081b1e5decbb1f1ddc582ab}\label{class_priority_queue_tree_af5b335959081b1e5decbb1f1ddc582ab}} 
+\index{PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}!Pop@{Pop}}
+\index{Pop@{Pop}!PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Pop()}{Pop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}}$<$ T $>$\+::Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Pop top element of priority queue (list\mbox{[}0\mbox{]} is a top one) 
+
+Implements \mbox{\hyperlink{class_priority_queue_interface}{Priority\+Queue\+Interface$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_priority_queue_tree_a6ae8bc94bb8a14f82771308777fba122}\label{class_priority_queue_tree_a6ae8bc94bb8a14f82771308777fba122}} 
+\index{PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}!Push@{Push}}
+\index{Push@{Push}!PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}}$<$ T $>$\+::Push (\begin{DoxyParamCaption}\item[{T}]{data,  }\item[{double}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Create a new item with given data and priority and push it into priority queue. We just use insert function for an A\+V\+L\+Tree, because it is an ordered tree 
+
+Implements \mbox{\hyperlink{class_priority_queue_interface}{Priority\+Queue\+Interface$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_priority_queue_tree_ad8f9b800a8c988ee3e1315a64e692216}\label{class_priority_queue_tree_ad8f9b800a8c988ee3e1315a64e692216}} 
+\index{PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}!Size@{Size}}
+\index{Size@{Size}!PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}}$<$ T $>$\+::Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns priority queue size, which is equal to inner list size 
+
+Implements \mbox{\hyperlink{class_priority_queue_interface}{Priority\+Queue\+Interface$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_priority_queue_tree_aa158e417d95b02028baa3f7934ea7012}\label{class_priority_queue_tree_aa158e417d95b02028baa3f7934ea7012}} 
+\index{PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}!Top@{Top}}
+\index{Top@{Top}!PriorityQueueTree$<$ T $>$@{PriorityQueueTree$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Top()}{Top()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_priority_queue_tree}{Priority\+Queue\+Tree}}$<$ T $>$\+::Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns top elemnet in priority queue 
+
+Implements \mbox{\hyperlink{class_priority_queue_interface}{Priority\+Queue\+Interface$<$ T $>$}}.
+
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

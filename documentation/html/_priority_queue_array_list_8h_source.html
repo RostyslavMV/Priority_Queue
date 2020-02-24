@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Priority_Queue/PriorityQueueArrayList.h Source File</title>
+<title>Priority Queue: Priority_Queue/PriorityQueueArrayList.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Priority Queue
    </div>
   </td>
  </tr>
@@ -85,49 +85,54 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_priority_queue_array_list.html#a6291f7222f78d8f0be020c29dbd0e42e">   23</a></span>&#160;    <a class="code" href="class_priority_queue_array_list.html#a6291f7222f78d8f0be020c29dbd0e42e">PriorityQueueArrayList</a>()</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> Push(T data, <span class="keywordtype">double</span> priority)<span class="keyword"> override</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <a class="code" href="class_priority_item.html">PriorityItem&lt;T&gt;</a> item(data, priority);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (list.Size() == 0) list.Add(item);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span> (list[0].priority &gt; priority) list.InsertAtBegin(item);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keywordtype">int</span> currentId = 0;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">while</span> (currentId + 1 &lt; list.Size() &amp;&amp; list[currentId + 1].priority &lt;= priority) currentId++;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                list.Insert(list[currentId], item);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> Pop()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (Empty()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Atempt to pop from empty queue&quot;</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        list.Remove(list[0]);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">bool</span> Empty()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">if</span> (list.Size() == 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    T Top()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">if</span> (Empty()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Atempt to pop from empty queue&quot;</span>);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keywordflow">return</span> list[0].value;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">int</span> Size()<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (Empty()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Queue is empty&quot;</span>);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> list.Size();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;};</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_priority_queue_array_list.html#a0312b9b87ce061bd17b8bd262f0592c8">   30</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_priority_queue_array_list.html#a0312b9b87ce061bd17b8bd262f0592c8">Push</a>(T data, <span class="keywordtype">double</span> priority)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <a class="code" href="class_priority_item.html">PriorityItem&lt;T&gt;</a> item(data, priority);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keywordflow">if</span> (list.Size() == 0) list.Add(item);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordflow">if</span> (list[0].priority &gt; priority) list.InsertAtBegin(item);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordtype">int</span> currentId = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">while</span> (currentId + 1 &lt; list.Size() &amp;&amp; list[currentId + 1].priority &lt;= priority) currentId++;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                list.Insert(list[currentId], item);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_priority_queue_array_list.html#a7eba6b312ff3cc2dfca1a5ec6011b93c">   48</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_priority_queue_array_list.html#a7eba6b312ff3cc2dfca1a5ec6011b93c">Pop</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_priority_queue_array_list.html#a18e025e61df9ba7c27e17732bd6dced8">Empty</a>()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Atempt to pop from empty queue&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        list.Remove(list[0]);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_priority_queue_array_list.html#a18e025e61df9ba7c27e17732bd6dced8">   56</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_priority_queue_array_list.html#a18e025e61df9ba7c27e17732bd6dced8">Empty</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">if</span> (list.Size() == 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_priority_queue_array_list.html#a68a61d1232eefd62fc3c4a3af0ab41d3">   64</a></span>&#160;    T <a class="code" href="class_priority_queue_array_list.html#a68a61d1232eefd62fc3c4a3af0ab41d3">Top</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_priority_queue_array_list.html#a18e025e61df9ba7c27e17732bd6dced8">Empty</a>()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Atempt to pop from empty queue&quot;</span>);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordflow">return</span> list[0].value;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_priority_queue_array_list.html#a11535bc9ea892bebf7372efd3dd81b13">   72</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_priority_queue_array_list.html#a11535bc9ea892bebf7372efd3dd81b13">Size</a>()<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_priority_queue_array_list.html#a18e025e61df9ba7c27e17732bd6dced8">Empty</a>()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Queue is empty&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">return</span> list.Size();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_priority_queue_list_html"><div class="ttname"><a href="class_priority_queue_list.html">PriorityQueueList</a></div><div class="ttdef"><b>Definition:</b> PriorityQueueList.h:8</div></div>
+<div class="ttc" id="aclass_priority_queue_array_list_html_a11535bc9ea892bebf7372efd3dd81b13"><div class="ttname"><a href="class_priority_queue_array_list.html#a11535bc9ea892bebf7372efd3dd81b13">PriorityQueueArrayList::Size</a></div><div class="ttdeci">int Size() override</div><div class="ttdef"><b>Definition:</b> PriorityQueueArrayList.h:72</div></div>
+<div class="ttc" id="aclass_priority_queue_array_list_html_a7eba6b312ff3cc2dfca1a5ec6011b93c"><div class="ttname"><a href="class_priority_queue_array_list.html#a7eba6b312ff3cc2dfca1a5ec6011b93c">PriorityQueueArrayList::Pop</a></div><div class="ttdeci">void Pop() override</div><div class="ttdef"><b>Definition:</b> PriorityQueueArrayList.h:48</div></div>
+<div class="ttc" id="aclass_priority_queue_array_list_html_a68a61d1232eefd62fc3c4a3af0ab41d3"><div class="ttname"><a href="class_priority_queue_array_list.html#a68a61d1232eefd62fc3c4a3af0ab41d3">PriorityQueueArrayList::Top</a></div><div class="ttdeci">T Top() override</div><div class="ttdef"><b>Definition:</b> PriorityQueueArrayList.h:64</div></div>
+<div class="ttc" id="aclass_priority_queue_list_html"><div class="ttname"><a href="class_priority_queue_list.html">PriorityQueueList</a></div><div class="ttdef"><b>Definition:</b> PriorityQueueList.h:11</div></div>
 <div class="ttc" id="aclass_priority_item_html"><div class="ttname"><a href="class_priority_item.html">PriorityItem</a></div><div class="ttdef"><b>Definition:</b> PriorityQueueInterface.h:11</div></div>
 <div class="ttc" id="aclass_priority_queue_array_list_html_a6291f7222f78d8f0be020c29dbd0e42e"><div class="ttname"><a href="class_priority_queue_array_list.html#a6291f7222f78d8f0be020c29dbd0e42e">PriorityQueueArrayList::PriorityQueueArrayList</a></div><div class="ttdeci">PriorityQueueArrayList()</div><div class="ttdef"><b>Definition:</b> PriorityQueueArrayList.h:23</div></div>
 <div class="ttc" id="aclass_priority_queue_array_list_html"><div class="ttname"><a href="class_priority_queue_array_list.html">PriorityQueueArrayList</a></div><div class="ttdef"><b>Definition:</b> PriorityQueueArrayList.h:5</div></div>
 <div class="ttc" id="aclass_priority_queue_array_list_html_a19906b6ccb9808c753317cb97d4290fe"><div class="ttname"><a href="class_priority_queue_array_list.html#a19906b6ccb9808c753317cb97d4290fe">PriorityQueueArrayList::PriorityQueueArrayList</a></div><div class="ttdeci">PriorityQueueArrayList(T firstData, double priority)</div><div class="ttdef"><b>Definition:</b> PriorityQueueArrayList.h:17</div></div>
+<div class="ttc" id="aclass_priority_queue_array_list_html_a0312b9b87ce061bd17b8bd262f0592c8"><div class="ttname"><a href="class_priority_queue_array_list.html#a0312b9b87ce061bd17b8bd262f0592c8">PriorityQueueArrayList::Push</a></div><div class="ttdeci">void Push(T data, double priority) override</div><div class="ttdef"><b>Definition:</b> PriorityQueueArrayList.h:30</div></div>
 <div class="ttc" id="aclass_array_list_html"><div class="ttname"><a href="class_array_list.html">ArrayList</a></div><div class="ttdef"><b>Definition:</b> List.h:208</div></div>
+<div class="ttc" id="aclass_priority_queue_array_list_html_a18e025e61df9ba7c27e17732bd6dced8"><div class="ttname"><a href="class_priority_queue_array_list.html#a18e025e61df9ba7c27e17732bd6dced8">PriorityQueueArrayList::Empty</a></div><div class="ttdeci">bool Empty() override</div><div class="ttdef"><b>Definition:</b> PriorityQueueArrayList.h:56</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

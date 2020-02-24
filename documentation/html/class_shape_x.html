@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: ShapeX Class Reference</title>
+<title>Priority Queue: ShapeX Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Priority Queue
    </div>
   </td>
  </tr>
@@ -70,6 +70,8 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p><code>#include &lt;<a class="el" href="_shape_8h_source.html">Shape.h</a>&gt;</code></p>
+
 <p>Inherits <a class="el" href="class_shape.html">Shape</a>.</p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -84,8 +86,7 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>Area</b> ()</td></t
 <tr class="memitem:a92fd8bd18a099e51543f166813673eef inherit pub_methods_class_shape"><td class="memItemLeft" align="right" valign="top"><a id="a92fd8bd18a099e51543f166813673eef"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>Perimeter</b> ()</td></tr>
 <tr class="separator:a92fd8bd18a099e51543f166813673eef inherit pub_methods_class_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a99ddb75252e260ff2da6f9d425454450 inherit pub_methods_class_shape"><td class="memItemLeft" align="right" valign="top"><a id="a99ddb75252e260ff2da6f9d425454450"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>SetN</b> (int n)</td></tr>
+<tr class="memitem:a99ddb75252e260ff2da6f9d425454450 inherit pub_methods_class_shape"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shape.html#a99ddb75252e260ff2da6f9d425454450">SetN</a> (int n)</td></tr>
 <tr class="separator:a99ddb75252e260ff2da6f9d425454450 inherit pub_methods_class_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abae2e4c49f0f37682bd8c0997925fd5b inherit pub_methods_class_shape"><td class="memItemLeft" align="right" valign="top"><a id="abae2e4c49f0f37682bd8c0997925fd5b"></a>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>X1</b> ()</td></tr>
@@ -113,11 +114,9 @@ double(*)(double x)&#160;</td><td class="memItemRight" valign="bottom"><b>Functi
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_class_shape"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_shape')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="class_shape.html">Shape</a></td></tr>
-<tr class="memitem:a6da57db3ac39cf6a25606623d70dd37e inherit pro_methods_class_shape"><td class="memItemLeft" align="right" valign="top"><a id="a6da57db3ac39cf6a25606623d70dd37e"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>SimpsonMethod</b> (double a, double b, int n, double(*f)(double x))</td></tr>
+<tr class="memitem:a6da57db3ac39cf6a25606623d70dd37e inherit pro_methods_class_shape"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shape.html#a6da57db3ac39cf6a25606623d70dd37e">SimpsonMethod</a> (double a, double b, int n, double(*f)(double x))</td></tr>
 <tr class="separator:a6da57db3ac39cf6a25606623d70dd37e inherit pro_methods_class_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54c7312597f7e41f2f136ae62aac2a7b inherit pro_methods_class_shape"><td class="memItemLeft" align="right" valign="top"><a id="a54c7312597f7e41f2f136ae62aac2a7b"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>FunctionLength</b> (double a, double b, int n, double(*f)(double x))</td></tr>
+<tr class="memitem:a54c7312597f7e41f2f136ae62aac2a7b inherit pro_methods_class_shape"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_shape.html#a54c7312597f7e41f2f136ae62aac2a7b">FunctionLength</a> (double a, double b, int n, double(*f)(double x))</td></tr>
 <tr class="separator:a54c7312597f7e41f2f136ae62aac2a7b inherit pro_methods_class_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_shape"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_shape')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_shape.html">Shape</a></td></tr>
 <tr class="memitem:a415068750ce63ae4eb2491f39b29ab9a inherit pro_attribs_class_shape"><td class="memItemLeft" align="right" valign="top"><a id="a415068750ce63ae4eb2491f39b29ab9a"></a>
@@ -142,7 +141,9 @@ double&#160;</td><td class="memItemRight" valign="bottom"><b>area</b></td></tr>
 double&#160;</td><td class="memItemRight" valign="bottom"><b>perimeter</b></td></tr>
 <tr class="separator:aa0bed7abceaca8a87db2c68d2328c4d0 inherit pro_attribs_class_shape"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class of shape between function and X axis </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>Priority_Queue/<a class="el" href="_shape_8h_source.html">Shape.h</a></li>
 </ul>
 </div><!-- contents -->

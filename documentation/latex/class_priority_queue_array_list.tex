@@ -11,20 +11,15 @@ Inherits \mbox{\hyperlink{class_priority_queue_list}{Priority\+Queue\+List$<$ T 
 \item 
 \mbox{\hyperlink{class_priority_queue_array_list_a6291f7222f78d8f0be020c29dbd0e42e}{Priority\+Queue\+Array\+List}} ()
 \item 
-\mbox{\Hypertarget{class_priority_queue_array_list_a0312b9b87ce061bd17b8bd262f0592c8}\label{class_priority_queue_array_list_a0312b9b87ce061bd17b8bd262f0592c8}} 
-void {\bfseries Push} (T data, double priority) override
+void \mbox{\hyperlink{class_priority_queue_array_list_a0312b9b87ce061bd17b8bd262f0592c8}{Push}} (T data, double priority) override
 \item 
-\mbox{\Hypertarget{class_priority_queue_array_list_a7eba6b312ff3cc2dfca1a5ec6011b93c}\label{class_priority_queue_array_list_a7eba6b312ff3cc2dfca1a5ec6011b93c}} 
-void {\bfseries Pop} () override
+void \mbox{\hyperlink{class_priority_queue_array_list_a7eba6b312ff3cc2dfca1a5ec6011b93c}{Pop}} () override
 \item 
-\mbox{\Hypertarget{class_priority_queue_array_list_a18e025e61df9ba7c27e17732bd6dced8}\label{class_priority_queue_array_list_a18e025e61df9ba7c27e17732bd6dced8}} 
-bool {\bfseries Empty} () override
+bool \mbox{\hyperlink{class_priority_queue_array_list_a18e025e61df9ba7c27e17732bd6dced8}{Empty}} () override
 \item 
-\mbox{\Hypertarget{class_priority_queue_array_list_a68a61d1232eefd62fc3c4a3af0ab41d3}\label{class_priority_queue_array_list_a68a61d1232eefd62fc3c4a3af0ab41d3}} 
-T {\bfseries Top} () override
+T \mbox{\hyperlink{class_priority_queue_array_list_a68a61d1232eefd62fc3c4a3af0ab41d3}{Top}} () override
 \item 
-\mbox{\Hypertarget{class_priority_queue_array_list_a11535bc9ea892bebf7372efd3dd81b13}\label{class_priority_queue_array_list_a11535bc9ea892bebf7372efd3dd81b13}} 
-int {\bfseries Size} () override
+int \mbox{\hyperlink{class_priority_queue_array_list_a11535bc9ea892bebf7372efd3dd81b13}{Size}} () override
 \end{DoxyCompactItemize}
 
 
@@ -44,6 +39,64 @@ Constructor for priority queue with first element data \mbox{\Hypertarget{class_
 \mbox{\hyperlink{class_priority_queue_array_list}{Priority\+Queue\+Array\+List}}$<$ T $>$\+::\mbox{\hyperlink{class_priority_queue_array_list}{Priority\+Queue\+Array\+List}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 Default constructor for priority queue 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_priority_queue_array_list_a18e025e61df9ba7c27e17732bd6dced8}\label{class_priority_queue_array_list_a18e025e61df9ba7c27e17732bd6dced8}} 
+\index{PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}!Empty@{Empty}}
+\index{Empty@{Empty}!PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Empty()}{Empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_priority_queue_array_list}{Priority\+Queue\+Array\+List}}$<$ T $>$\+::Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+This bool returns true if priority queue is empty (inner list is empty) 
+
+Implements \mbox{\hyperlink{class_priority_queue_interface}{Priority\+Queue\+Interface$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_priority_queue_array_list_a7eba6b312ff3cc2dfca1a5ec6011b93c}\label{class_priority_queue_array_list_a7eba6b312ff3cc2dfca1a5ec6011b93c}} 
+\index{PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}!Pop@{Pop}}
+\index{Pop@{Pop}!PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Pop()}{Pop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_priority_queue_array_list}{Priority\+Queue\+Array\+List}}$<$ T $>$\+::Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Pop top element of priority queue (list\mbox{[}0\mbox{]} is a top one) 
+
+Implements \mbox{\hyperlink{class_priority_queue_list}{Priority\+Queue\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_priority_queue_array_list_a0312b9b87ce061bd17b8bd262f0592c8}\label{class_priority_queue_array_list_a0312b9b87ce061bd17b8bd262f0592c8}} 
+\index{PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}!Push@{Push}}
+\index{Push@{Push}!PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Push()}{Push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_priority_queue_array_list}{Priority\+Queue\+Array\+List}}$<$ T $>$\+::Push (\begin{DoxyParamCaption}\item[{T}]{data,  }\item[{double}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Create a new item with given data and priority and push it into priority queue. We iterate through the list untill new item\textquotesingle{}s priority is higher and then insert it in a list. 
+
+Implements \mbox{\hyperlink{class_priority_queue_list}{Priority\+Queue\+List$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_priority_queue_array_list_a11535bc9ea892bebf7372efd3dd81b13}\label{class_priority_queue_array_list_a11535bc9ea892bebf7372efd3dd81b13}} 
+\index{PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}!Size@{Size}}
+\index{Size@{Size}!PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Size()}{Size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+int \mbox{\hyperlink{class_priority_queue_array_list}{Priority\+Queue\+Array\+List}}$<$ T $>$\+::Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns priority queue size, which is equal to inner list size 
+
+Implements \mbox{\hyperlink{class_priority_queue_interface}{Priority\+Queue\+Interface$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_priority_queue_array_list_a68a61d1232eefd62fc3c4a3af0ab41d3}\label{class_priority_queue_array_list_a68a61d1232eefd62fc3c4a3af0ab41d3}} 
+\index{PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}!Top@{Top}}
+\index{Top@{Top}!PriorityQueueArrayList$<$ T $>$@{PriorityQueueArrayList$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Top()}{Top()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{class_priority_queue_array_list}{Priority\+Queue\+Array\+List}}$<$ T $>$\+::Top (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+Returns top element in priority queue (list\mbox{[}0\mbox{]}) 
+
+Implements \mbox{\hyperlink{class_priority_queue_list}{Priority\+Queue\+List$<$ T $>$}}.
+
+
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

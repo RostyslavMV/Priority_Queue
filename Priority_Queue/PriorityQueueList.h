@@ -4,6 +4,9 @@
 
 using std::out_of_range;
 
+///
+/// Interface for PriorityQueueArrayList and PriorityQueueLinkedList
+///
 template <typename T>
 class PriorityQueueList :
 	public PriorityQueueInterface <T>

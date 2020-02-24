@@ -2,6 +2,10 @@
 \label{class_shape}\index{Shape@{Shape}}
 
 
+{\ttfamily \#include $<$Shape.\+h$>$}
+
+
+
 Inherited by \mbox{\hyperlink{class_shape2_functions}{Shape2\+Functions}}, \mbox{\hyperlink{class_shape_intersection}{Shape\+Intersection}}, and \mbox{\hyperlink{class_shape_x}{ShapeX}}.
 
 \doxysubsection*{Public Member Functions}
@@ -13,8 +17,7 @@ double {\bfseries Area} ()
 \mbox{\Hypertarget{class_shape_a92fd8bd18a099e51543f166813673eef}\label{class_shape_a92fd8bd18a099e51543f166813673eef}} 
 double {\bfseries Perimeter} ()
 \item 
-\mbox{\Hypertarget{class_shape_a99ddb75252e260ff2da6f9d425454450}\label{class_shape_a99ddb75252e260ff2da6f9d425454450}} 
-void {\bfseries SetN} (int n)
+void \mbox{\hyperlink{class_shape_a99ddb75252e260ff2da6f9d425454450}{SetN}} (int n)
 \item 
 \mbox{\Hypertarget{class_shape_abae2e4c49f0f37682bd8c0997925fd5b}\label{class_shape_abae2e4c49f0f37682bd8c0997925fd5b}} 
 double {\bfseries X1} ()
@@ -37,11 +40,9 @@ double($\ast$)(double x) {\bfseries Function2} ()
 \doxysubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_shape_a6da57db3ac39cf6a25606623d70dd37e}\label{class_shape_a6da57db3ac39cf6a25606623d70dd37e}} 
-double {\bfseries Simpson\+Method} (double a, double b, int n, double($\ast$f)(double x))
+double \mbox{\hyperlink{class_shape_a6da57db3ac39cf6a25606623d70dd37e}{Simpson\+Method}} (double a, double b, int n, double($\ast$f)(double x))
 \item 
-\mbox{\Hypertarget{class_shape_a54c7312597f7e41f2f136ae62aac2a7b}\label{class_shape_a54c7312597f7e41f2f136ae62aac2a7b}} 
-double {\bfseries Function\+Length} (double a, double b, int n, double($\ast$f)(double x))
+double \mbox{\hyperlink{class_shape_a54c7312597f7e41f2f136ae62aac2a7b}{Function\+Length}} (double a, double b, int n, double($\ast$f)(double x))
 \item 
 \mbox{\Hypertarget{class_shape_a84ec286573ad8e5acfba94616cbdeddd}\label{class_shape_a84ec286573ad8e5acfba94616cbdeddd}} 
 virtual void {\bfseries Calculate\+Area} ()=0
@@ -83,6 +84,30 @@ ostream \& {\bfseries operator$<$$<$} (ostream \&os, const \mbox{\hyperlink{clas
 bool {\bfseries operator$>$} (const \mbox{\hyperlink{class_shape}{Shape}} \&shape1, const \mbox{\hyperlink{class_shape}{Shape}} \&shape2)
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Abstract class with main shape paramaters, used for derived class with special input method 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_shape_a54c7312597f7e41f2f136ae62aac2a7b}\label{class_shape_a54c7312597f7e41f2f136ae62aac2a7b}} 
+\index{Shape@{Shape}!FunctionLength@{FunctionLength}}
+\index{FunctionLength@{FunctionLength}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{FunctionLength()}{FunctionLength()}}
+{\footnotesize\ttfamily double Shape\+::\+Function\+Length (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{int}]{n,  }\item[{double($\ast$)(double x)}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+A method for finding graph of fucntion length, used for finding shape perimeter \mbox{\Hypertarget{class_shape_a99ddb75252e260ff2da6f9d425454450}\label{class_shape_a99ddb75252e260ff2da6f9d425454450}} 
+\index{Shape@{Shape}!SetN@{SetN}}
+\index{SetN@{SetN}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{SetN()}{SetN()}}
+{\footnotesize\ttfamily void Shape\+::\+SetN (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Change integration step and step used for calculating function length \mbox{\Hypertarget{class_shape_a6da57db3ac39cf6a25606623d70dd37e}\label{class_shape_a6da57db3ac39cf6a25606623d70dd37e}} 
+\index{Shape@{Shape}!SimpsonMethod@{SimpsonMethod}}
+\index{SimpsonMethod@{SimpsonMethod}!Shape@{Shape}}
+\doxysubsubsection{\texorpdfstring{SimpsonMethod()}{SimpsonMethod()}}
+{\footnotesize\ttfamily double Shape\+::\+Simpson\+Method (\begin{DoxyParamCaption}\item[{double}]{a,  }\item[{double}]{b,  }\item[{int}]{n,  }\item[{double($\ast$)(double x)}]{f }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+Simpson\textquotesingle{}s method is a method for numerical integration 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

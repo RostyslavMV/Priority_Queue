@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: Priority_Queue/PriorityQueueTree.h Source File</title>
+<title>Priority Queue: Priority_Queue/PriorityQueueTree.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Priority Queue
    </div>
   </td>
  </tr>
@@ -82,44 +82,51 @@ $(function() {
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="class_a_v_ltree.html">AVLtree&lt;PriorityTreeItem&lt;T&gt;</a>&gt; tree;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="class_priority_queue_tree.html">PriorityQueueTree</a>()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="class_priority_queue_tree.html">PriorityQueueTree</a>(T firstData, <span class="keywordtype">double</span> priority)</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_priority_queue_tree.html#a8d288ffaf59030eb4f92899ae453b741">   17</a></span>&#160;    <a class="code" href="class_priority_queue_tree.html#a8d288ffaf59030eb4f92899ae453b741">PriorityQueueTree</a>()</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <a class="code" href="class_priority_tree_item.html">PriorityTreeItem&lt;T&gt;</a> item(firstData, priority);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        tree.²nsert(item);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> Push(T data, <span class="keywordtype">double</span> priority)<span class="keyword"> override</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <a class="code" href="class_priority_tree_item.html">PriorityTreeItem&lt;T&gt;</a> item(data, priority);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        tree.²nsert(item);      </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordtype">void</span> Pop()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">if</span> (Empty()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Atempt to pop from empty queue&quot;</span>);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        tree.DeleteKey(tree.MinNode()-&gt;data);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">bool</span> Empty()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_priority_queue_tree.html#a2d51ddc6d6231d36fe38642c38756226">   23</a></span>&#160;    <a class="code" href="class_priority_queue_tree.html#a2d51ddc6d6231d36fe38642c38756226">PriorityQueueTree</a>(T firstData, <span class="keywordtype">double</span> priority)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <a class="code" href="class_priority_tree_item.html">PriorityTreeItem&lt;T&gt;</a> item(firstData, priority);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        tree.²nsert(item);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_priority_queue_tree.html#a6ae8bc94bb8a14f82771308777fba122">   32</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_priority_queue_tree.html#a6ae8bc94bb8a14f82771308777fba122">Push</a>(T data, <span class="keywordtype">double</span> priority)<span class="keyword"> override</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">if</span> (tree.Size() == 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="class_priority_tree_item.html">PriorityTreeItem&lt;T&gt;</a> item(data, priority);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        tree.²nsert(item);      </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">int</span> Size()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> tree.Size();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    T Top()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (Empty()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Queue is empty&quot;</span>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> tree.MinNode()-&gt;data.value;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;};</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="class_priority_queue_tree.html#af5b335959081b1e5decbb1f1ddc582ab">   40</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="class_priority_queue_tree.html#af5b335959081b1e5decbb1f1ddc582ab">Pop</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_priority_queue_tree.html#a32f7094889c3ce7c240a6e272677fae0">Empty</a>()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Atempt to pop from empty queue&quot;</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        tree.DeleteKey(tree.MinNode()-&gt;data);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_priority_queue_tree.html#a32f7094889c3ce7c240a6e272677fae0">   48</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="class_priority_queue_tree.html#a32f7094889c3ce7c240a6e272677fae0">Empty</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">if</span> (tree.Size() == 0) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="class_priority_queue_tree.html#ad8f9b800a8c988ee3e1315a64e692216">   56</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="class_priority_queue_tree.html#ad8f9b800a8c988ee3e1315a64e692216">Size</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordflow">return</span> tree.Size();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    }</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_priority_queue_tree.html#aa158e417d95b02028baa3f7934ea7012">   63</a></span>&#160;    T <a class="code" href="class_priority_queue_tree.html#aa158e417d95b02028baa3f7934ea7012">Top</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_priority_queue_tree.html#a32f7094889c3ce7c240a6e272677fae0">Empty</a>()) <span class="keywordflow">throw</span> out_of_range(<span class="stringliteral">&quot;Queue is empty&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> tree.MinNode()-&gt;data.value;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="aclass_priority_queue_tree_html_ad8f9b800a8c988ee3e1315a64e692216"><div class="ttname"><a href="class_priority_queue_tree.html#ad8f9b800a8c988ee3e1315a64e692216">PriorityQueueTree::Size</a></div><div class="ttdeci">int Size() override</div><div class="ttdef"><b>Definition:</b> PriorityQueueTree.h:56</div></div>
 <div class="ttc" id="aclass_a_v_ltree_html"><div class="ttname"><a href="class_a_v_ltree.html">AVLtree</a></div><div class="ttdef"><b>Definition:</b> AVLtree.h:29</div></div>
 <div class="ttc" id="aclass_priority_queue_interface_html"><div class="ttname"><a href="class_priority_queue_interface.html">PriorityQueueInterface</a></div><div class="ttdef"><b>Definition:</b> PriorityQueue.h:6</div></div>
-<div class="ttc" id="aclass_priority_tree_item_html"><div class="ttname"><a href="class_priority_tree_item.html">PriorityTreeItem</a></div><div class="ttdef"><b>Definition:</b> PriorityQueueInterface.h:40</div></div>
+<div class="ttc" id="aclass_priority_queue_tree_html_aa158e417d95b02028baa3f7934ea7012"><div class="ttname"><a href="class_priority_queue_tree.html#aa158e417d95b02028baa3f7934ea7012">PriorityQueueTree::Top</a></div><div class="ttdeci">T Top() override</div><div class="ttdef"><b>Definition:</b> PriorityQueueTree.h:63</div></div>
+<div class="ttc" id="aclass_priority_queue_tree_html_a8d288ffaf59030eb4f92899ae453b741"><div class="ttname"><a href="class_priority_queue_tree.html#a8d288ffaf59030eb4f92899ae453b741">PriorityQueueTree::PriorityQueueTree</a></div><div class="ttdeci">PriorityQueueTree()</div><div class="ttdef"><b>Definition:</b> PriorityQueueTree.h:17</div></div>
+<div class="ttc" id="aclass_priority_queue_tree_html_a2d51ddc6d6231d36fe38642c38756226"><div class="ttname"><a href="class_priority_queue_tree.html#a2d51ddc6d6231d36fe38642c38756226">PriorityQueueTree::PriorityQueueTree</a></div><div class="ttdeci">PriorityQueueTree(T firstData, double priority)</div><div class="ttdef"><b>Definition:</b> PriorityQueueTree.h:23</div></div>
+<div class="ttc" id="aclass_priority_queue_tree_html_a32f7094889c3ce7c240a6e272677fae0"><div class="ttname"><a href="class_priority_queue_tree.html#a32f7094889c3ce7c240a6e272677fae0">PriorityQueueTree::Empty</a></div><div class="ttdeci">bool Empty() override</div><div class="ttdef"><b>Definition:</b> PriorityQueueTree.h:48</div></div>
+<div class="ttc" id="aclass_priority_queue_tree_html_af5b335959081b1e5decbb1f1ddc582ab"><div class="ttname"><a href="class_priority_queue_tree.html#af5b335959081b1e5decbb1f1ddc582ab">PriorityQueueTree::Pop</a></div><div class="ttdeci">void Pop() override</div><div class="ttdef"><b>Definition:</b> PriorityQueueTree.h:40</div></div>
+<div class="ttc" id="aclass_priority_tree_item_html"><div class="ttname"><a href="class_priority_tree_item.html">PriorityTreeItem</a></div><div class="ttdef"><b>Definition:</b> PriorityQueueInterface.h:55</div></div>
+<div class="ttc" id="aclass_priority_queue_tree_html_a6ae8bc94bb8a14f82771308777fba122"><div class="ttname"><a href="class_priority_queue_tree.html#a6ae8bc94bb8a14f82771308777fba122">PriorityQueueTree::Push</a></div><div class="ttdeci">void Push(T data, double priority) override</div><div class="ttdef"><b>Definition:</b> PriorityQueueTree.h:32</div></div>
 <div class="ttc" id="aclass_priority_queue_tree_html"><div class="ttname"><a href="class_priority_queue_tree.html">PriorityQueueTree</a></div><div class="ttdef"><b>Definition:</b> PriorityQueueTree.h:8</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

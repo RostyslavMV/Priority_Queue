@@ -8,16 +8,15 @@ Inherited by \mbox{\hyperlink{class_priority_tree_item}{Priority\+Tree\+Item$<$ 
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_priority_item_a41bea246b2c4c31f25edb49b5d4f9816}\label{class_priority_item_a41bea246b2c4c31f25edb49b5d4f9816}} 
-{\bfseries Priority\+Item} (T value, int priority)
+{\bfseries Priority\+Item} (T value, int \mbox{\hyperlink{class_priority_item_a88339a865e23c6f46647ee4c95de0432}{priority}})
 \item 
-\mbox{\Hypertarget{class_priority_item_a537ae2c8388cc374f613852e59096258}\label{class_priority_item_a537ae2c8388cc374f613852e59096258}} 
-ostream \& {\bfseries operator$<$$<$} (ostream \&os)
+\mbox{\hyperlink{class_priority_item_a9d090a40e478017f66953db129e95276}{Priority\+Item}} ()
 \item 
-\mbox{\Hypertarget{class_priority_item_ae54b363077f3597de7bea7269faf9925}\label{class_priority_item_ae54b363077f3597de7bea7269faf9925}} 
-bool {\bfseries operator==} (const \mbox{\hyperlink{class_priority_item}{Priority\+Item}} \&pi)
+ostream \& \mbox{\hyperlink{class_priority_item_a537ae2c8388cc374f613852e59096258}{operator$<$$<$}} (ostream \&os)
 \item 
-\mbox{\Hypertarget{class_priority_item_a81551c94ee8e52c8e0b4d08e38489333}\label{class_priority_item_a81551c94ee8e52c8e0b4d08e38489333}} 
-bool {\bfseries operator$>$} (const \mbox{\hyperlink{class_priority_item}{Priority\+Item}} \&pi)
+bool \mbox{\hyperlink{class_priority_item_ae54b363077f3597de7bea7269faf9925}{operator==}} (const \mbox{\hyperlink{class_priority_item}{Priority\+Item}} \&pi)
+\item 
+bool \mbox{\hyperlink{class_priority_item_a81551c94ee8e52c8e0b4d08e38489333}{operator$>$}} (const \mbox{\hyperlink{class_priority_item}{Priority\+Item}} \&pi)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
@@ -25,10 +24,55 @@ bool {\bfseries operator$>$} (const \mbox{\hyperlink{class_priority_item}{Priori
 \mbox{\Hypertarget{class_priority_item_a0f54c898bc2faba91b4f043553ea4165}\label{class_priority_item_a0f54c898bc2faba91b4f043553ea4165}} 
 T {\bfseries value}
 \item 
-\mbox{\Hypertarget{class_priority_item_a88339a865e23c6f46647ee4c95de0432}\label{class_priority_item_a88339a865e23c6f46647ee4c95de0432}} 
-double {\bfseries priority}
+double \mbox{\hyperlink{class_priority_item_a88339a865e23c6f46647ee4c95de0432}{priority}}
 \end{DoxyCompactItemize}
 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_priority_item_a9d090a40e478017f66953db129e95276}\label{class_priority_item_a9d090a40e478017f66953db129e95276}} 
+\index{PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}!PriorityItem@{PriorityItem}}
+\index{PriorityItem@{PriorityItem}!PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{PriorityItem()}{PriorityItem()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_priority_item}{Priority\+Item}}$<$ T $>$\+::\mbox{\hyperlink{class_priority_item}{Priority\+Item}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_priority_item_a537ae2c8388cc374f613852e59096258}\label{class_priority_item_a537ae2c8388cc374f613852e59096258}} 
+\index{PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$()}{operator<<()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+ostream\& \mbox{\hyperlink{class_priority_item}{Priority\+Item}}$<$ T $>$\+::operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+$<$$<$ operator for an item to output item\textquotesingle{}s value \mbox{\Hypertarget{class_priority_item_ae54b363077f3597de7bea7269faf9925}\label{class_priority_item_ae54b363077f3597de7bea7269faf9925}} 
+\index{PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_priority_item}{Priority\+Item}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_priority_item}{Priority\+Item}}$<$ T $>$ \&}]{pi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Custom == operator \mbox{\Hypertarget{class_priority_item_a81551c94ee8e52c8e0b4d08e38489333}\label{class_priority_item_a81551c94ee8e52c8e0b4d08e38489333}} 
+\index{PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_priority_item}{Priority\+Item}}$<$ T $>$\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_priority_item}{Priority\+Item}}$<$ T $>$ \&}]{pi }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\begin{quote}
+operator for comparing by value \end{quote}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_priority_item_a88339a865e23c6f46647ee4c95de0432}\label{class_priority_item_a88339a865e23c6f46647ee4c95de0432}} 
+\index{PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}!priority@{priority}}
+\index{priority@{priority}!PriorityItem$<$ T $>$@{PriorityItem$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{priority}{priority}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double \mbox{\hyperlink{class_priority_item}{Priority\+Item}}$<$ T $>$\+::priority}
+
+Lower value of priority means higher item priority 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

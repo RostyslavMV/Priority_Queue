@@ -59,7 +59,7 @@ public:
 		return false;
 	}
 	///
-	/// Returns top elemnt in priority queue (list[0])
+	/// Returns top element in priority queue (list[0])
 	///
 	T Top() override
 	{

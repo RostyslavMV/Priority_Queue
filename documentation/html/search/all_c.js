@@ -1,12 +1,15 @@
 var searchData=
 [
-  ['pluralise_94',['pluralise',['../struct_catch_1_1pluralise.html',1,'Catch']]],
-  ['predicatematcher_95',['PredicateMatcher',['../class_catch_1_1_matchers_1_1_generic_1_1_predicate_matcher.html',1,'Catch::Matchers::Generic']]],
-  ['priorityitem_96',['PriorityItem',['../class_priority_item.html',1,'']]],
-  ['priorityqueuearraylist_97',['PriorityQueueArrayList',['../class_priority_queue_array_list.html',1,'PriorityQueueArrayList&lt; T &gt;'],['../class_priority_queue_array_list.html#a19906b6ccb9808c753317cb97d4290fe',1,'PriorityQueueArrayList::PriorityQueueArrayList(T firstData, double priority)'],['../class_priority_queue_array_list.html#a6291f7222f78d8f0be020c29dbd0e42e',1,'PriorityQueueArrayList::PriorityQueueArrayList()']]],
-  ['priorityqueueinterface_98',['PriorityQueueInterface',['../class_priority_queue_interface.html',1,'']]],
-  ['priorityqueuelinkedlist_99',['PriorityQueueLinkedList',['../class_priority_queue_linked_list.html',1,'']]],
-  ['priorityqueuelist_100',['PriorityQueueList',['../class_priority_queue_list.html',1,'']]],
-  ['priorityqueuetree_101',['PriorityQueueTree',['../class_priority_queue_tree.html',1,'']]],
-  ['prioritytreeitem_102',['PriorityTreeItem',['../class_priority_tree_item.html',1,'']]]
+  ['pluralise_100',['pluralise',['../struct_catch_1_1pluralise.html',1,'Catch']]],
+  ['pop_101',['Pop',['../class_priority_queue_array_list.html#a7eba6b312ff3cc2dfca1a5ec6011b93c',1,'PriorityQueueArrayList::Pop()'],['../class_priority_queue_linked_list.html#a2d1b2920185b24c2c6d3308aeef1b05a',1,'PriorityQueueLinkedList::Pop()'],['../class_priority_queue_tree.html#af5b335959081b1e5decbb1f1ddc582ab',1,'PriorityQueueTree::Pop()']]],
+  ['predicatematcher_102',['PredicateMatcher',['../class_catch_1_1_matchers_1_1_generic_1_1_predicate_matcher.html',1,'Catch::Matchers::Generic']]],
+  ['priority_103',['priority',['../class_priority_item.html#a88339a865e23c6f46647ee4c95de0432',1,'PriorityItem']]],
+  ['priorityitem_104',['PriorityItem',['../class_priority_item.html',1,'PriorityItem&lt; T &gt;'],['../class_priority_item.html#a9d090a40e478017f66953db129e95276',1,'PriorityItem::PriorityItem()']]],
+  ['priorityqueuearraylist_105',['PriorityQueueArrayList',['../class_priority_queue_array_list.html',1,'PriorityQueueArrayList&lt; T &gt;'],['../class_priority_queue_array_list.html#a19906b6ccb9808c753317cb97d4290fe',1,'PriorityQueueArrayList::PriorityQueueArrayList(T firstData, double priority)'],['../class_priority_queue_array_list.html#a6291f7222f78d8f0be020c29dbd0e42e',1,'PriorityQueueArrayList::PriorityQueueArrayList()']]],
+  ['priorityqueueinterface_106',['PriorityQueueInterface',['../class_priority_queue_interface.html',1,'']]],
+  ['priorityqueuelinkedlist_107',['PriorityQueueLinkedList',['../class_priority_queue_linked_list.html',1,'PriorityQueueLinkedList&lt; T &gt;'],['../class_priority_queue_linked_list.html#a6eab3b08fd438acdd9474d94d43effcb',1,'PriorityQueueLinkedList::PriorityQueueLinkedList(T firstData, double priority)'],['../class_priority_queue_linked_list.html#ac4dec451127eb86474e841e0bd8dd2e6',1,'PriorityQueueLinkedList::PriorityQueueLinkedList()']]],
+  ['priorityqueuelist_108',['PriorityQueueList',['../class_priority_queue_list.html',1,'']]],
+  ['priorityqueuetree_109',['PriorityQueueTree',['../class_priority_queue_tree.html',1,'PriorityQueueTree&lt; T &gt;'],['../class_priority_queue_tree.html#a8d288ffaf59030eb4f92899ae453b741',1,'PriorityQueueTree::PriorityQueueTree()'],['../class_priority_queue_tree.html#a2d51ddc6d6231d36fe38642c38756226',1,'PriorityQueueTree::PriorityQueueTree(T firstData, double priority)']]],
+  ['prioritytreeitem_110',['PriorityTreeItem',['../class_priority_tree_item.html',1,'PriorityTreeItem&lt; T &gt;'],['../class_priority_tree_item.html#a0d0bb94ef14fb71af4825649134ad249',1,'PriorityTreeItem::PriorityTreeItem(T value, double priority)'],['../class_priority_tree_item.html#acee449ef19a699ca865851f84476a0c5',1,'PriorityTreeItem::PriorityTreeItem()']]],
+  ['push_111',['Push',['../class_priority_queue_array_list.html#a0312b9b87ce061bd17b8bd262f0592c8',1,'PriorityQueueArrayList::Push()'],['../class_priority_queue_linked_list.html#a44588a391183f1b642a5eb8ef318cef0',1,'PriorityQueueLinkedList::Push()'],['../class_priority_queue_tree.html#a6ae8bc94bb8a14f82771308777fba122',1,'PriorityQueueTree::Push()']]]
 ];

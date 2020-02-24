@@ -4,15 +4,21 @@
 
 using std::ostream;
 
+///
+/// Abstract class with main shape paramaters, used for derived class with special input method 
+///
 class Shape
 {
 protected:
 	double(*function1)(double x);
 	double(*function2)(double x);
-	int n = 10000;
+	int n = 10000; 
 	double x1, x2;
 	double area;
 	double perimeter;
+	///
+	/// Simpson's method is a method for numerical integration
+	///
 	double SimpsonMethod(double a, double b, int n, double(*f)(double x))
 	{
 		double h = (b - a) / n;
@@ -29,6 +35,9 @@ protected:
 
 		return s * h / 3.0;
 	}
+	///
+	/// A method for finding graph of fucntion length, used for finding shape perimeter
+	///
 	double FunctionLength(double a, double b, int n, double(*f)(double x))
 	{
 		double length = 0;
@@ -51,7 +60,9 @@ public:
 	{
 		return perimeter;
 	}
-	// Change integration step and step used for calculating function length
+	///
+	/// Change integration step and step used for calculating function length
+	///
 	void SetN(int n)
 	{
 		this->n = n;
@@ -95,8 +106,9 @@ double ReturnZero(double x)
 {
 	return 0;
 }
-
-// class of shape between function and X axis
+///
+/// Class of shape between function and X axis
+///
 class ShapeX : public Shape
 {
 private:
@@ -170,8 +182,14 @@ public:
 
 struct MySegment
 {
-	double y2; // Higher point
-	double y1; //Lower point
+	///
+	/// Higher point
+	///
+	double y2; 
+	///
+	/// Lower point
+	///
+	double y1; 
 	MySegment(double y1, double y2)
 	{
 		this->y1 = y1;
@@ -223,10 +241,15 @@ private:
 			this->perimeter += FunctionLength(x1 + h * i, x1 + h * (i + 1), 1, function2);
 		}
 	}
-	// Primeter is calculated with area simultaneously for this class
+	///	
+	/// Primeter is calculated with area simultaneously for this class
+	///
 	void CalculatePerimeter() override
 	{
 	}
+	///
+	/// Returns intersection of 2 segments with end points y1, y2 and y3, y4
+	///
 	MySegment getIntersection(double y1, double y2, double y3, double y4)
 	{
 		MySegment segment(0, 0);
